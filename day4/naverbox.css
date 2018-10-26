@@ -1,0 +1,176 @@
+*{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0; padding: 0;
+  font-family: Dotum,'돋움', Helvetica, "Apple SD Go Gothic Neo", sans-serif;
+  font-size: 12px;
+}
+div{
+  display: block;
+}
+a{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
+
+.container{
+  min-width: 1100px;
+}
+
+.nav-top{
+  height: 130px;
+}
+.nav-bottom{
+  border-bottom: 1px solid black;
+}
+.nav-top-inner{
+  margin: 0 auto;
+  height: 170px;
+  width: 1080px;
+  position: relative;
+}
+.nav-bottom-inner{
+  margin: 0 auto;
+  height: 47px;
+  width: 1080px;
+}
+
+/*************bottom start****************/
+.bottom{
+  background-color: #f2f4f7;
+}
+.bottom-inner{
+  width: 1100px;
+  margin: 0 auto;/*위 아래는 0 좌우는 오토*/
+  padding: 8px 10px 0;/*8px 10px 0px 10px*/
+}
+.bottom-wrap{
+  font-size: 0;/*좌우박스들 사이에 공백이 들어가버려서 사용한것*/
+}
+.bottom-left, .bottom-right{/*둘 다 제어하려고 ,로 형제를 묶었다.*/
+  display: inline-block;
+}
+.bottom-left{
+  width: 740px;
+}
+.bottom-right{
+  width: 332px;
+  float: right;
+  /*block에서는 여백이 있어줘야 사용가능하다.*/
+}
+.bottom-left>div,
+.bottom-right>div
+{/*bottom-left의 자식 div들 선택*/
+  margin-bottom: 8px;
+  border: 1px solid #dee3eb;
+  background-color: white;
+}
+
+/**************small bax start**********************/
+/******top***********/
+.top_links{
+  position: absolute;
+  top: 11px;
+  right: -5px;
+  zoom: 1;
+}
+.top_links>a{
+  text-decoration: none;
+}
+.favorite{
+  line-height: 22px;
+  height: 21px;
+  color: #888;
+  letter-spacing: -1px;/*글자간격조정*/
+  font-size: 11px;
+  float: left;
+}
+.jr_naver{
+  padding: 5px;
+  float: left;
+}
+.jrnaver_inner{
+  background-image: url(https://s.pstatic.net/static/www/img/2018/sp_main_v181019.png);
+  background-position: 0 -120px;
+  height: 12px;
+  width: 58px;
+}
+.jr_naver, .happy_b{
+  padding: 5px;
+  float: left;
+}
+.happy_inner{
+  background-image: url(https://s.pstatic.net/static/www/img/2018/sp_main_v181019.png);
+  background-position: -143px -52px;
+  height: 11px;
+  width: 34px;
+}
+
+/******container***************/
+.bottom-left>div.box1{ /*그냥 하면 적용안되어서 부모클래스의 어디어디라고 지정을 해줬음*/
+  height: 120px;
+  border-color: rgb(254,233,202);
+}
+
+.box2{
+  height: 46px; 
+}
+.box3{
+  height: 246px;
+}
+/******right nav start************/
+.box4{
+  height: 120px;
+  position: relative;
+}
+.box4_inner{
+  height: 120px;
+  padding: 15px 25px;
+}
+.box4_inner>p{
+  color: #888;
+  font-size: 12px;
+  line-height: 14px;/*글자높이를 조정해주는 속성 라인 헤이트는 글자 크기보다 같거나 크게 해야한다.*/
+}
+.lg_local_btn{
+  height: 37px;
+  margin-top: 12px;
+  display: block;
+  background-image: url(https://s.pstatic.net/static/www/img/2018/sp_login_v180727.png);
+  background-position: 0 -47px;
+  background-repeat: no-repeat;
+}
+.text_blind{
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  /*반드시 이 속성은 absolute와 함께 사용하여야 한다. 마스크를 씌우는 기능이라는 듯함.*/
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+}
+.lg_links{
+  height: 38px;
+  width: 280px;
+  position: absolute;
+  bottom: 0px;
+  left: 25px;/*여기서는 안써도 제대로 되지만 써주는게 맞다.*/
+  font-size:0;
+}
+.lg_links>a{
+  line-height: 38px;
+  font-size: 12px;
+  color: #666;
+}
+.join_User{
+  float: right;
+}
+.box5{
+  height: 142px;
+}
+.box6{
+  height: 150px;
+}
