@@ -1,0 +1,69 @@
+*{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0; padding: 0;
+}
+.container{
+  min-width: 1100px;
+}
+
+.nav-top{
+  height: 130px;
+}
+.nav-bottom{
+  border-bottom: 1px solid black;
+}
+.nav-top-inner{
+  margin: 0 auto;
+  height: 170px;
+  width: 1080px;
+}
+.nav-bottom-inner{
+  margin: 0 auto;
+  height: 47px;
+  width: 1080px;
+}
+.bottom-inner{
+  width: 1100px;
+  margin: 0 auto;/*위 아래는 0 좌우는 오토*/
+  padding: 8px 10px 0;/*8px 10px 0px 10px*/
+}
+.bottom-wrap{
+  font-size: 0;/*좌우박스들 사이에 공백이 들어가버려서 사용한것*/
+}
+.bottom-left, .bottom-right{/*둘 다 제어하려고 ,로 형제를 묶었다.*/
+  display: inline-block;
+}
+.bottom-left{
+  width: 740px;
+}
+.bottom-right{
+  width: 332px;
+  float: right;
+  /*block에서는 여백이 있어줘야 사용가능하다.*/
+}
+.bottom-left>div,
+.bottom-right>div
+{/*bottom-left의 자식 div들 선택*/
+  margin-bottom: 8px;
+  border: 1px solid gray;
+}
+.box1{
+  height: 120px;
+}
+.box2{
+  height: 46px; 
+}
+.box3{
+  height: 246px;
+}
+.box4{
+  height: 120px;
+}
+.box5{
+  height: 142px;
+}
+.box6{
+  height: 150px;
+}
