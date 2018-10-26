@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<base href="http://127.0.0.1:5500/" target="_blank">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<!--base태그는 기본이 되는 메인 페이지가 있고 그 아래에 링크를 눌러 이동
+	할 때 http://127.0.0.1:5500/어쩌고/어쩌고/처럼 하위 페이지가
+	이동되게 한다.
+	예를들어 네이버에서 증권, 뉴스, 키즈 등 처럼 서로 연관이
+	없는 페이지들은 각 페이지 주소가 다르지만 그 아래에 메뉴로 움직이는 것들은
+	호스팅 네임이 같고 하위 이름이 다르다.
+	<base href="http://opentutorials.org/" target="_blank">이런식으로 사용-->
+	<title>흐아아아아아아</title>
+</head>
+<body>
+  <h1 title="제일 중요한 제목입니다." id="home">1장 홈페이지 만들기</h1>
+  <h2>제목2</h2>
+	<h3>제목3</h3> <!--쉬프트 탭 누르면 안쪽으로 컨트롤 엔터하면 바로 아래로 내려감-->
+	<h4>제목4</h4>
+	<h5>제목5</h5>
+  <h6>제목6</h6>
+	
+	<p>안녕하세요.</p>
+	<p>처음 시작&nbsp;&nbsp;하는 html입니다.</p><!--한 문단을 써야 할 때 사용-->
+	<!--&nbsp는 띄어쓰기.-->
+	<!--&lt = < // &gt = > //&amp = & 표기-->
+	하<br><!--이것도 엔터임. 사이 간격이 더 좁다.-->
+	<hr><!--선 긋는거-->
+
+	<pre>
+		&lt;pre&gt;를 사용하면
+				내가 입력한 그대로
+				출력이
+					된		다.
+	</pre>
+	<b></b>
+	<strong>d</strong>
+	<i>d</i>
+	<em>d</em>
+	<small>d</small>
+	<del>d</del>
+	<ins>d</ins><br>
+	a<sup>2</sup><br> <!--윗첨자-->
+	a<sub>2</sub><br> <!--아래첨자-->
+	<mark>d</mark>
+
+	<div style=" background-color: skyblue; padding:20px; width: 60px; margin: 0;">dddddd</div>
+
+	<a href="http://www.naver.com">눌러보세요.</a><br>
+	<a href="studytmp.html">dd</a><br><br>
+	
+	<button class="btn btn-primary btn-lg active">버튼</button>
+	<a href="https://www.google.co.kr/" target="_self">
+		<img src="https://www.google.co.kr/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+		alt="Google"" title="구글로 이동합니다." width="200px" height="auto">
+	</a>
+
+	<ol type="A" start="H">
+		<li>하나</li>
+		<li>둘</li>
+	</ol>
+  
+	<ul>
+		<li>1</li>
+		<li>2</li>
+	</ul>
+	<table>
+		<caption>학생 성적표</caption>
+		<thead>
+			<th>이름</th>
+			<th>과목</th>
+			<th>점수</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td>주</td>
+				<td>수학</td>
+				<td>10</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>합계</td>
+				<td></td>
+				<td>10</td>
+			</tr>
+		</tfoot>
+		
+	</table>
+	<table border="1">
+		<tr>
+			<th>이름</th><!--알트 클릭하면 커서 여러개 선택 됨-->
+			<th>과목</th>
+			<th>점수</th>
+		</tr>
+		<tr>
+			<td>주완준</td>
+			<td>HTNL</td>
+			<td>100</td>
+		</tr>
+		<tr>
+			<td>합계</td>
+			<td></td>
+			<td>100</td>
+		</tr>
+	</table>
+	<a href="http://www.naver.com" target="_self">네이버</a>
+	<a href="study01.html#home">맨위로</a><!--#은 앵커-->
+	<!--모든 태그의 공통적인 속성중에 대표적인 속성이 id, name, class가 있다.
+	id는 고유해랴한다.(중복불가)
+	name과 class는 중복이 가능하다.-->
+
+		<a href="googlelogo_color_272x92dp.png"" download>다운로드</a>
+
+</body>
+</html>
+
+<!--html:5하고 엔터하면 자동완성됨 개쉽다.-->

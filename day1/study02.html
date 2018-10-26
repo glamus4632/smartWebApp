@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>회원가입</h1>
+  <form action="###"><!--method 속성값은 GET과 POST가 있다-->
+  <!--get은 url뒤에 전송할 데이터를 넣어 전송하는 방식
+  post는 url이 아닌 hearder에 데이터를 넣어 서버에 전송하는 방식
+  일반적으로 회원가입이나 로그인과 같이 정보를 보호해야할 경우에는
+  post방식을 이용 (보안)-->
+    &nbsp 아이디: <input type="text" placeholder="ID.." autofocus><br><!--검색이나 ID-->
+    비밀번호: <input type="password"><br> <!--password로 하면 가려짐-->
+    성별: <input type="radio" name="gender" value="male" checked>남성
+    <!--체크드 요소를 넣으면 체크되어 있는 상태로 된다.-->
+    <input type="radio" name="gender" value="female">여성<br>
+
+    E-mail: <input type="email">
+    <br>
+    <input type="checkbox">필수동의1
+    <input type="checkbox">선택동의1 <input type="checkbox">선택동의2
+    <br>
+    <input type="submit" value="회원가입">
+
+  </form>
+  <form action="">
+    <input type="color" name="" id="">
+    <input type="number"><br>
+    
+    <select>
+      <option value="0">출생년도</option>
+      <!--value는 년도가 선택되지 않았다는 것을 서버에 알려주기 위해 사용됐다-->
+      <option>2018</option>
+      <option>2017</option>
+      <option>2016</option>
+    </select><br>
+    <input type="file" name="" id=""> <!--파일선택하는 버튼-->
+    <input type="month" name="" id=""><br> <!--달력-->
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+  </form>
+</body>
+</html>
+
+<!--자주 쓰는 폼 타입
+  text
+  password
+  checkbox
+  radio
+  email(@가 없으면 전송이 안됨)
+  file
+  submit(서버에 제출)
+  
+  select(option이랑 같이 사용)
+  textarea
+-->

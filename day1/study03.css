@@ -1,0 +1,62 @@
+@charset 'utf=8';
+/*
+셀렉터
+1. 태그 셀렉터
+ - 태그 이름을 그대로 사용하면 된다.
+2. 아이디 셀렉터
+ - 아이디에 #을 붙여서사용한다.
+3. 클래스 셀렉터
+ - 클래스에 . 을 붙여서 사용한다.
+4. 가상 클래스 셀렉터
+ - hover, active, 보통 링크에 많이 씀
+5. 전체 셀렉터
+ - *
+ */
+*{margin: 0;
+  font-size: 20px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  /*다른 브라우저 지원가능하게 함*/
+}/*width를 쓸 때
+border값까지 포함되게 자동으로 설정해 줌. border를 따로
+계산 할 필요가 없다.*/
+a{text-decoration: none;}
+
+div, p{
+  background-color:skyblue;
+  height: 100px; width: 400px;
+  border: 1px solid black;
+  
+}
+#hi{
+  font-weight: 700;/*px을 붙이면 안먹힘*/
+
+}
+.font-red:hover{
+  color: red;
+  cursor: text;/*커서 모양이 변함*/
+}
+
+
+a:hover{
+  text-decoration: underline;
+  
+}
+
+div>.font-red{background-color: black; width: 100px; height: 50px;
+  top: 23px; margin: auto;
+  position: relative;}
+
+/*
+div.(##){} 이렇게 바로 붙여 쓰면 <div class="##">형태의
+셀렉터만 선택된다.
+(붙여써도 되는 예 = 태그클래스, 클래스클래스)
+
+A E  -> A밑의 E부터 그 아래 모든 자손을 선택
+A>E  -> A밑의 E와 같은 이름을 가진 애만 선택
+A+E  -> A를 요소에 인접한 E요소 선택
+
+*/
+
+
