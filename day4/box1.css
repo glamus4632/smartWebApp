@@ -15,13 +15,13 @@ body{
   /*height: 500px; height를 지운 이유는 자식의 높이에 따라 자동조절 되게 하기 위해서*/
   border: solid 1px red;
   /*font-size: 0; box_Right에 float:Right를 줘서 안써줘도 된다.*/
-  padding: 3px;
+  
   /*자식들이 float기 때문에 인라인 블럭으로 해줘야
   자식들이 float속성이어도 자식들을 인식할 수 있게된다.*/ 
 }
 .box_Left, .box_Right{
   width: 50%;/*연산자는 사이를 띄워줘야한다.*/
-  height: 200px;
+  height: 300px;
   border: solid 1px blue;
   /*플로트 속성은 위로 띄워서 배치시키기 때문에
   부모의 높이가 정해지지 않으면 부모의 크기가 줄어든다.*/
