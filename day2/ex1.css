@@ -1,0 +1,36 @@
+@charset 'utf-8';
+*{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+div{
+  text-decoration: line-through;
+  text-align: center;
+  text-indent: 10px;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 20px;
+  border: solid 1px black;
+  margin: 10px 20px 30px 40px;/*위 오른 아래 왼*/
+  /* 위아래, 왼 오른이 같으면  10px 20px */
+  /* font-family: "돋움"; 폰트 이름을 미리 알고 있으면 쌍따옴표로 써도 됨
+                          한글이름폰트면 영어도 같이 써줘야 함*/
+  font-family: 'Times New Roman', Times, serif;
+  color: darkslategray;
+  font: italic 700 30px 'Times New Roman', Times, serif;
+  /* 스타일 웨이트(굵기) 사이즈 폰트 */
+  border: solid 2px blue;
+  border-bottom-color: red;
+  /*
+  border-top-width:10px;
+  border-top-style:solid;
+  border-style:solid;
+  border-width:10px;
+  border-color:red;
+  */
+  padding-top: 20px;
+  border-radius: 5px 20px; /*왼위오른아래, 오른위, 왼아*/
+}
+

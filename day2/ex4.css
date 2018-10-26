@@ -1,0 +1,38 @@
+@charset 'utf-8';
+*{
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+body{font-size: 14px; }
+div{border: solid 1px black;}
+#container{
+  max-width: 1000px;
+  min-width: 1000px;
+  margin: auto;
+}
+#top{
+  height: 100px;
+  background-color: aliceblue;
+}
+#bottom{
+  border-color: blue;
+  padding: 8px;/*안쪽으로 8px씩 주면 안쪽의 박스들의 마진을 신경쓰지 않아도 된다.*/
+}
+#inner{
+  border-color: green;
+  font-size: 0px;
+}
+#inner>*{ font-size: 14px;}
+#leftbox,#rightbox{
+  height: 400px;
+  background-color: aliceblue;
+  display: inline-block;
+  width:calc((100% - 8px) / 2); /*수식을 쓸 수 있다. 중요하다
+                                  총 면적(width)에서 8px을 빼고 2로 나눈것.
+  */
+}
+#rightbox{
+  float: right;
+}

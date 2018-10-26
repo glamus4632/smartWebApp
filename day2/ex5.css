@@ -1,0 +1,19 @@
+@charset 'utf-8';
+
+*{
+  box-sizing: border-box;
+  margin: 0px; border: solid 1px black;
+}
+
+.box1{
+  padding: 10px; /*안쪽에 여백을 줘서 아들태그들의 위치 관리*/
+}
+.box1-inner{
+  height: 100px;
+  border-color:red;
+}
+.box2-inner{
+  height: 100px;
+  border-color: red;
+  margin: 10px; /*마진으로 직접 위치 관리*/
+}

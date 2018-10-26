@@ -1,0 +1,44 @@
+@charset 'utf-8';
+*{
+  
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+/* box 클래스 */
+.box{
+  background-color: aliceblue;
+  background-image:url("googlelogo_color_272x92dp.png");
+  /*이미지는 보통 박스사이즈와 동일하게 제작하여 쓰는 것이 좋다.
+  딱 맞추는 것이 베스트*/
+  background-position: center;/*기준*/
+  /* 
+  background-position-x: center; x축을 기준으로 가운데
+  background-position-y: center; y축을 기준으로 가운데
+  */
+  background-repeat: no-repeat;/*배경 반복없음*/
+  height: 400px;
+  text-shadow: 2px 2px 5px red;
+}
+div{
+  font:normal 24px verdata;
+  cursor: pointer;/*손가락모양 나옴*/
+}
+.dropText{text-shadow: 3px 3px;}/*원본이랑 같은애가 3*3만큼 내려옴*/
+.redText{text-shadow: 3px 3px red;}/*색이 다른애가 3*3만큼 내려옴*/
+.blurText{text-shadow: 3px 3px 5px skyblue;}/*glow(번짐)을 5픽셀만큼*/
+.glowEffect{text-shadow: 0px 0px 3px red;}
+.wordArtEffect{
+  color: white;/*글자색이 흰, 글로우가 다크블루*/
+  text-shadow: 0px 0px 3px darkblue;
+  
+}
+.threeDEffect{
+  color: white;/*그림자도 2*2만큼 떨어트리고 글로우도 4 줌*/
+  text-shadow: 2px 2px 4px black;
+}
+.multiEffect{
+  color: yellow;
+  text-shadow: 2px 2px 2px black,
+                0 0 25px blue, 0 0 5px darkblue;
+}
