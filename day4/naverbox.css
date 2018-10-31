@@ -16,6 +16,12 @@ a:hover{
   text-decoration: underline;
 }
 
+li{
+  list-style: none;
+}
+fieldset{
+  border: 0;
+}
 .container{
   min-width: 1100px;
 }
@@ -24,18 +30,21 @@ a:hover{
   height: 130px;
 }
 .nav-bottom{
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #d1d8e4;
+  border-top: solid 1px #f1f3f6;
 }
 .nav-top-inner{
   margin: 0 auto;
-  height: 170px;
+  height: 130px;
   width: 1080px;
   position: relative;
 }
 .nav-bottom-inner{
   margin: 0 auto;
-  height: 47px;
+  height: 46px;
   width: 1080px;
+  font-size: 0;
+  position: relative;
 }
 
 /*************bottom start****************/
@@ -71,6 +80,14 @@ a:hover{
 
 /**************small bax start**********************/
 /******top***********/
+.icon_open, .jrnaver_inner, .happy_inner{
+  background-image: url(https://s.pstatic.net/static/www/img/2018/sp_main_v181019.png);
+  background-repeat: no-repeat;
+}
+.naver_logo, .keyboard_img, .auto_btn, .search_btn_eye{
+  background-image: url(https://s.pstatic.net/static/www/img/2018/sp_search.svg);
+  background-repeat: no-repeat;
+}
 .top_links{
   position: absolute;
   top: 11px;
@@ -88,28 +105,290 @@ a:hover{
   font-size: 11px;
   float: left;
 }
+.favorite:hover{
+  text-decoration: underline;
+}
 .jr_naver{
   padding: 5px;
   float: left;
 }
 .jrnaver_inner{
-  background-image: url(https://s.pstatic.net/static/www/img/2018/sp_main_v181019.png);
   background-position: 0 -120px;
-  height: 12px;
+  height: 11px;
   width: 58px;
+}
+.jrnaver_inner:hover{
+  background-position: -68px -120px;
 }
 .jr_naver, .happy_b{
   padding: 5px;
   float: left;
 }
 .happy_inner{
-  background-image: url(https://s.pstatic.net/static/www/img/2018/sp_main_v181019.png);
   background-position: -143px -52px;
   height: 11px;
   width: 34px;
 }
+.happy_inner:hover{
+  background-position: -143px -73px;
+}
+/***********nav top end************************************************/
+/*************top logo & search bar***********************************/
+.nav-top-inner h1{
+  position: absolute;
+  top: 50%;
+  margin-top: -25px;
+  left: -2px;
+}
+.top_logo{
+  display: block;
+}
+.naver_logo{
+  display: block;
+  width: 198px;
+  height: 48px;
+  background-position: -4px -4px;
+}
+/**************logo end*************************/
+.search{
+  position: absolute;
+  width: 521px;
+  height: 49px;
+  top:50%;
+  margin-top: -20px;
+  left: 219px;
+  font-size: 0;
+}
+.green_area{
+  display: inline-block;
+  width: 474px;
+  height: 49px;
+  border: 2px solid #03cf5d;
+  background-color: #fff;
+}
+.input_search{
+  position: relative;
+  width: 405px;
+  height: 23px;
+  margin-top: 12px;
+  margin-left: 9px;
+  border: 0;
+  outline: 0;/*이걸 해줘야 커서 깜빡여도 테두리가 안보임*/
+  line-height: 23px;
+  font-size: 18px;
+}
+/*************search bar end*****************/
+.btn{
+  position: absolute;
+  top: 50%;
+  right: 49px;
+  margin-top: -21px;
+  padding: 19px 12px 19px 6px; 
+}
+.auto_btn{
+  width: 9px;
+  height: 4px;
+  background-position: -87px -60px;
+  display: block;
+}
+.search_btn{
+  position: absolute;
+  width: 47px;
+  height: 49px;
+  top: 50%;
+  right: 0px;
+  margin-top: -25px;
+  background-color: #03cf5d;
+  border: 0;
+}
+.search_btn_eye{
+  position: absolute;
+  top: 14px;
+  left: 12px;
+  width: 21px;
+  height: 21px;
+  background-position: -4px -60px;
+}
+.keyboard_btn{
+  position: absolute;
+  top: 50%;
+  right: 76px;
+  margin-top: -21px;
+  padding: 15px 6px;
+}
 
-/******container***************/
+.keyboard_img{
+  display: block;
+  width: 19px;
+  height: 11px;
+  background-position: -33px -60px;
+}
+.keyboard_img:active, .keyboard_img:visited{
+  background-image: url(https://s.pstatic.net/static/www/img/2018/sp_search.svg);
+  background-repeat: no-repeat;
+  background-position: -60px -60px;
+}
+/******top_nav************************************************************************************/
+.icon, .more{
+  background-image: url(https://s.pstatic.net/static/www/img/2018/sp_nav_v181019.png);
+  background-repeat: no-repeat;
+}
+.an_l{
+  position: relative;
+  padding-top: 16px;
+  padding-left: 4px;
+  float: left;
+  zoom: 1;
+  font-size: 0;
+}
+.an_l .an_item:first-child{/**첫 번째 자식만 선택함***/
+  padding-left: 0;
+}
+.an_item{
+  display: inline-block;
+  padding-left: 14px;
+}
+.an_item>a{
+  position: relative;
+}
+.icon{
+  display: block;
+}
+/***********초록색 nav 시작****************************************/
+.mail .icon{
+  width: 25px;
+  height: 16px;
+  background-position: -244px -233px;
+}
+.cafe .icon{
+  width: 27px;
+  height: 16px;
+  background-position: -279px -130px;
+}
+.blog .icon{
+  width: 40px;
+  height: 16px;
+  background-position: -150px -182px;
+}
+.jisikin .icon{
+  width: 40px;
+  height: 16px;
+  background-position: -102px -156px;
+}
+.shop .icon{
+  width: 26px;
+  height: 16px;
+  background-position: -128px -104px;
+}
+.pay .icon{
+  width: 25px;
+  height: 16px;
+  background-position: -107px -285px;
+}
+.tv .icon{
+  margin-top: -1px;
+  width: 32px;
+  height: 16px;
+  background-position: -125px -131px;
+}
+/**********초록색 nav end ***************************************************/
+#service_nav{
+  padding-left: 14px;
+}
+.dictionary .icon{
+  width: 26px;
+  height: 16px;
+  background-position: 0 -259px;
+}
+.news .icon{
+  width: 28px;
+  height: 16px;
+  background-position: -279px -26px;
+}
+.stock .icon{
+  width: 26px;
+  height: 16px;
+  background-position: -108px -259px;
+}
+.land .icon{
+  width: 40px;
+  height: 16px;
+  background-position: -152px -156px;
+}
+.map .icon{
+  width: 27px;
+  height: 16px;
+    background-position: -279px -208px;
+}
+.movie .icon{
+  width: 27px;
+  height: 16px;
+  background-position: -279px -52px;
+}
+.music .icon{
+  width: 26px;
+  height: 16px;
+  background-position: -144px -259px;
+}
+.book .icon{
+  width: 13px;
+  height: 16px;
+  background-position: -140px -78px;
+}
+.wtoon .icon{
+  width: 27px;
+  height: 16px;
+  background-position: -279px -78px;
+}
+/********초록색 nav end*******************************************************/
+.bar{
+  display: inline-block;
+  margin: 18px 16px 0;
+  width: 1px;
+  height: 14px;
+  border-left: solid 1px #ebeef3;
+}
+.more_btn{
+  position: relative;
+  display: inline-block;
+  margin-top: 16px;
+}
+.more{
+  display: block;
+  width: 55px;
+  height: 16px;
+  background-position: 0 -104px;
+}
+.roll-area{
+  position: absolute;
+  width: 198px;
+  height: 20px;
+  right: 0px;
+  top:50%;
+  margin-top: -9px;
+  line-height: 20px;
+}
+.real-number{
+  color: #00ab33;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  line-height: 20px;
+}
+.real-search{
+  line-height: 20px;
+  font-size: 14px;
+}
+.icon_open{
+  width: 11px;
+  height: 6px;
+  position: absolute;
+  right: 4px;
+  top:50%;
+  margin-top: -3px;
+  line-height: 20px;
+  background-position: -187px -73px;
+}
+/******container*****************************************************************************/
 .bottom-left>div.box1{ /*그냥 하면 적용안되어서 부모클래스의 어디어디라고 지정을 해줬음*/
   height: 120px;
   border-color: rgb(254,233,202);
@@ -121,7 +400,7 @@ a:hover{
 .box3{
   height: 246px;
 }
-/******right nav start************/
+/******right nav start***********************************************************************/
 .box4{
   height: 120px;
   position: relative;
@@ -168,9 +447,67 @@ a:hover{
 .join_User{
   float: right;
 }
+/*********box5 start*********************/
 .box5{
   height: 142px;
 }
+.area_header{
+  padding-left: 15px;
+  height: 34px;
+  border-bottom: 1px solid #ebeef3;
+}
+.box5-bootom{
+  height: 106;
+}
+.box5-item1{
+  display: inline-block;
+  width: 208px;
+  height: 33px;
+  padding: 10px 0 7px;
+  position: relative;
+}
+.header_li{
+  display: inline-block;
+  font-size: 0;
+}
+.date, .day{
+  font-weight: 700;
+  line-height: 17px;
+  font-size: 14px;
+  letter-spacing: -1px;
+  color: #000;
+}
+.day{
+  margin-left: 3px;
+  font-size: 13px;
+  line-height: 16px;
+  vertical-align: top;
+}
+.date:hover{
+  text-decoration: underline;
+}
+
+.header_info a:hover{
+  text-decoration: none;
+}
+.fas{
+  color: rgb(227,231,238);
+}
+.location{
+  position: relative;
+  top: -1px;
+  display: inline;
+  max-width:130px;
+  color: #888;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+.fas.fa-angle-right{
+  font-weight: 700;
+  color: #888;
+}
+/********bax6 start************************/
 .box6{
   height: 150px;
 }
