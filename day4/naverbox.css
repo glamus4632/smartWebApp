@@ -201,6 +201,9 @@ fieldset{
   background-color: #03cf5d;
   border: 0;
 }
+.search_btn:hover{
+  cursor: pointer;
+}
 .search_btn_eye{
   position: absolute;
   top: 14px;
@@ -393,12 +396,130 @@ fieldset{
   height: 120px;
   border-color: rgb(254,233,202);
 }
-
+/*box2 start******************/
 .box2{
   height: 46px; 
+  position: relative;
 }
+.box2-inner{
+  padding: 15px 0 0 16px;
+  font-size: 0;
+}
+.box2-inner::after{/* :: 가상 클래스*/
+  clear: both;/*플로트를 만들면 공간이 뜨게 되는데 clear를 사용하여 플로트를 무시할 수 있게한다.*/
+  content: ""; 
+  display: block;/*h3가 float라서 디스플레이 block으로 빈 공간을 만들어줘서 높이를 생성해줬다.*/
+}
+.news{/*h3*/
+  font-size: 0;
+  float: left;
+  display: inline-block;
+}
+.box2-news-head{
+  font-weight: 700;
+  color: #000;
+  font-size: 14px;
+  font-family: NanumSquare,Dotum,"돋움",Helvetica,AppleSDGothicNeo,sans-serif;
+  text-decoration: none;
+  line-height: 16px;
+  margin-right: 12px;
+  letter-spacing: -1px;
+}
+.box2-news-head:hover{
+  text-decoration: none;
+}
+.icon-next{
+  background-image: url(https://s.pstatic.net/static/www/img/2018/sp_newscast_v180511.png);
+  background-position: -256px -100px;
+  display: inline-block;
+  width: 5px;
+  height: 9px;
+  margin: 3px 0 0 5px;
+}
+.news-cast-txt{
+  float: left;
+  width: 340px;
+  height: 20px;
+  color: #222;
+  font-size: 12px;
+  line-height: 18px;
+}
+.news-cast-txt>a{
+  color: #000;
+}
+.news-cast-txt>a:visited{
+  color: #888;
+}
+.box2-inner2{
+  position: absolute;
+  top: 50%;
+  right: 2px;
+  margin-top: -7px;
+}
+.box2-inner2::after{
+  clear: both;
+  content: "";
+  display: block;
+}
+.ul-item{
+  display: inline-block;
+  float: left;
+  margin-right: 14px;
+  font-size: 12px;
+}
+.ul-item>a{
+  display: block;
+  height: 15px;
+  line-height: 16px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #666;
+}
+.ul-item>a:hover{
+  color: #000;
+}
+.ul-item>.green{
+  color: #00ab33;
+}
+.ul-item>.green:hover{
+  color: #0b9500;
+}
+/****box3 start**********************************************/
 .box3{
   height: 246px;
+}
+.box3-top{
+  height: 45px;
+  border-bottom: 1px solid #ebeef3;
+  position: relative;
+}
+.box3-top>h3{
+  position: absolute;
+  padding: 13px 0 0 16px;
+}
+.box3-newsStand{
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  display: inline-block;
+}
+.box3-next{
+  background-image: url(https://s.pstatic.net/static/www/img/2018/sp_newscast_v180511.png);
+  width: 5px;
+  height: 9px;
+  background-position: -256px -100px;
+  display: inline-block;
+  margin: 0 6px;
+}
+.box3-multi{
+  position: absolute;
+  top: 0;
+  left: 102px;
+  padding: 13px 0;
+  height: 18px;
 }
 /******right nav start***********************************************************************/
 .box4{
@@ -455,6 +576,7 @@ fieldset{
   padding-left: 15px;
   height: 34px;
   border-bottom: 1px solid #ebeef3;
+  position: relative;
 }
 .box5-bootom{
   height: 106;
@@ -506,6 +628,54 @@ fieldset{
 .fas.fa-angle-right{
   font-weight: 700;
   color: #888;
+}
+/*************************item1 end*/
+.box5-item2{
+  position: absolute;
+  top: 10px;
+  right: 0;
+  margin-right: 78px;
+  color: #888;
+  font-size: 12px;
+  line-height: 14px;
+  font-family: Tahoma, sans-serif;
+  font-weight: 100;
+}
+.color-black{
+  color: #000;
+  font-size: 12px;
+}
+/***********************item2 end*/
+.box5-item3{
+  width: 68px;
+  height: 33px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 0;/*화살표가 엔터때문에 인라인 블럭이어도 밑으로 내려가게됨 그래서 공백 지우려고 써줬다*/
+}
+.box5-item3-prev, .box5-item3-next{
+  display: inline-block;
+  text-align: center;
+  width: 34px;
+  height: 33px;
+  border-left:solid 1px #ebeef3;
+  padding: 11px 0;
+}
+.btn-prev, .btn-next{
+  background-image: url(https://s.pstatic.net/static/www/img/2017/sp_timesquare_v170913a.png); 
+}
+.btn-prev{
+  background-position: -433px -303px;
+  width: 6px;
+  height: 11px;
+  display: inline-block;
+}
+.btn-next{
+  background-position: -433px -324px;
+  width: 6px;
+  height: 11px;
+  display: inline-block;
 }
 /********bax6 start************************/
 .box6{
