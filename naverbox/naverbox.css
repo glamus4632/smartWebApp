@@ -1,0 +1,750 @@
+*{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0; padding: 0;
+  font-family: Dotum,'돋움', Helvetica, "Apple SD Go Gothic Neo", sans-serif;
+  font-size: 12px;
+}
+div{
+  display: block;
+}
+a{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
+
+li{
+  list-style: none;
+}
+fieldset{
+  border: 0;
+}
+.container{
+  min-width: 1100px;
+}
+
+.nav-top{
+  height: 130px;
+}
+.nav-bottom{
+  border-bottom: 1px solid #d1d8e4;
+  border-top: solid 1px #f1f3f6;
+}
+.nav-top-inner{
+  margin: 0 auto;
+  height: 130px;
+  width: 1080px;
+  position: relative;
+}
+.nav-bottom-inner{
+  margin: 0 auto;
+  height: 46px;
+  width: 1080px;
+  font-size: 0;
+  position: relative;
+}
+
+/*************bottom start****************/
+.bottom{
+  background-color: #f2f4f7;
+}
+.bottom-inner{
+  width: 1100px;
+  margin: 0 auto;/*위 아래는 0 좌우는 오토*/
+  padding: 8px 10px 0;/*8px 10px 0px 10px*/
+}
+.bottom-wrap{
+  font-size: 0;/*좌우박스들 사이에 공백이 들어가버려서 사용한것*/
+}
+.bottom-left, .bottom-right{/*둘 다 제어하려고 ,로 형제를 묶었다.*/
+  display: inline-block;
+}
+.bottom-left{
+  width: 740px;
+}
+.bottom-right{
+  width: 332px;
+  float: right;
+  /*block에서는 여백이 있어줘야 사용가능하다.*/
+}
+.bottom-left>div,
+.bottom-right>div
+{/*bottom-left의 자식 div들 선택*/
+  margin-bottom: 8px;
+  border: 1px solid #dee3eb;
+  background-color: white;
+}
+
+/**************small bax start**********************/
+/******top***********/
+.icon_open, .jrnaver_inner, .happy_inner{
+  background-image: url(https://s.pstatic.net/static/www/img/2018/sp_main_v181019.png);
+  background-repeat: no-repeat;
+}
+.naver_logo, .keyboard_img, .auto_btn, .search_btn_eye{
+  background-image: url(https://s.pstatic.net/static/www/img/2018/sp_search.svg);
+  background-repeat: no-repeat;
+}
+.top_links{
+  position: absolute;
+  top: 11px;
+  right: -5px;
+  zoom: 1;
+}
+.top_links>a{
+  text-decoration: none;
+}
+.favorite{
+  line-height: 22px;
+  height: 21px;
+  color: #888;
+  letter-spacing: -1px;/*글자간격조정*/
+  font-size: 11px;
+  float: left;
+}
+.favorite:hover{
+  text-decoration: underline;
+}
+.jr_naver{
+  padding: 5px;
+  float: left;
+}
+.jrnaver_inner{
+  background-position: 0 -120px;
+  height: 11px;
+  width: 58px;
+}
+.jrnaver_inner:hover{
+  background-position: -68px -120px;
+}
+.jr_naver, .happy_b{
+  padding: 5px;
+  float: left;
+}
+.happy_inner{
+  background-position: -143px -52px;
+  height: 11px;
+  width: 34px;
+}
+.happy_inner:hover{
+  background-position: -143px -73px;
+}
+/***********nav top end************************************************/
+/*************top logo & search bar***********************************/
+.nav-top-inner h1{
+  position: absolute;
+  top: 50%;
+  margin-top: -25px;
+  left: -2px;
+}
+.top_logo{
+  display: block;
+}
+.naver_logo{
+  display: block;
+  width: 198px;
+  height: 48px;
+  background-position: -4px -4px;
+}
+/**************logo end*************************/
+.search{
+  position: absolute;
+  width: 521px;
+  height: 49px;
+  top:50%;
+  margin-top: -20px;
+  left: 219px;
+  font-size: 0;
+}
+.green_area{
+  display: inline-block;
+  width: 474px;
+  height: 49px;
+  border: 2px solid #03cf5d;
+  background-color: #fff;
+}
+.input_search{
+  position: relative;
+  width: 405px;
+  height: 23px;
+  margin-top: 12px;
+  margin-left: 9px;
+  border: 0;
+  outline: 0;/*이걸 해줘야 커서 깜빡여도 테두리가 안보임*/
+  line-height: 23px;
+  font-size: 18px;
+}
+/*************search bar end*****************/
+.btn{
+  position: absolute;
+  top: 50%;
+  right: 49px;
+  margin-top: -21px;
+  padding: 19px 12px 19px 6px; 
+}
+.auto_btn{
+  width: 9px;
+  height: 4px;
+  background-position: -87px -60px;
+  display: block;
+}
+.search_btn{
+  position: absolute;
+  width: 47px;
+  height: 49px;
+  top: 50%;
+  right: 0px;
+  margin-top: -25px;
+  background-color: #03cf5d;
+  border: 0;
+}
+.search_btn:hover{
+  cursor: pointer;
+}
+.search_btn_eye{
+  position: absolute;
+  top: 14px;
+  left: 12px;
+  width: 21px;
+  height: 21px;
+  background-position: -4px -60px;
+}
+.keyboard_btn{
+  position: absolute;
+  top: 50%;
+  right: 76px;
+  margin-top: -21px;
+  padding: 15px 6px;
+}
+
+.keyboard_img{
+  display: block;
+  width: 19px;
+  height: 11px;
+  background-position: -33px -60px;
+}
+.keyboard_img:active, .keyboard_img:visited{
+  background-image: url(https://s.pstatic.net/static/www/img/2018/sp_search.svg);
+  background-repeat: no-repeat;
+  background-position: -60px -60px;
+}
+/******top_nav************************************************************************************/
+.icon, .more{
+  background-image: url(https://s.pstatic.net/static/www/img/2018/sp_nav_v181019.png);
+  background-repeat: no-repeat;
+}
+.an_l{
+  position: relative;
+  padding-top: 16px;
+  padding-left: 4px;
+  float: left;
+  zoom: 1;
+  font-size: 0;
+}
+.an_l .an_item:first-child{/**첫 번째 자식만 선택함***/
+  padding-left: 0;
+}
+.an_item{
+  display: inline-block;
+  padding-left: 14px;
+}
+.an_item>a{
+  position: relative;
+}
+.icon{
+  display: block;
+}
+/***********초록색 nav 시작****************************************/
+.mail .icon{
+  width: 25px;
+  height: 16px;
+  background-position: -244px -233px;
+}
+.cafe .icon{
+  width: 27px;
+  height: 16px;
+  background-position: -279px -130px;
+}
+.blog .icon{
+  width: 40px;
+  height: 16px;
+  background-position: -150px -182px;
+}
+.jisikin .icon{
+  width: 40px;
+  height: 16px;
+  background-position: -102px -156px;
+}
+.shop .icon{
+  width: 26px;
+  height: 16px;
+  background-position: -128px -104px;
+}
+.pay .icon{
+  width: 25px;
+  height: 16px;
+  background-position: -107px -285px;
+}
+.tv .icon{
+  margin-top: -1px;
+  width: 32px;
+  height: 16px;
+  background-position: -125px -131px;
+}
+/**********초록색 nav end ***************************************************/
+#service_nav{
+  padding-left: 14px;
+}
+.dictionary .icon{
+  width: 26px;
+  height: 16px;
+  background-position: 0 -259px;
+}
+.news .icon{
+  width: 28px;
+  height: 16px;
+  background-position: -279px -26px;
+}
+.stock .icon{
+  width: 26px;
+  height: 16px;
+  background-position: -108px -259px;
+}
+.land .icon{
+  width: 40px;
+  height: 16px;
+  background-position: -152px -156px;
+}
+.map .icon{
+  width: 27px;
+  height: 16px;
+    background-position: -279px -208px;
+}
+.movie .icon{
+  width: 27px;
+  height: 16px;
+  background-position: -279px -52px;
+}
+.music .icon{
+  width: 26px;
+  height: 16px;
+  background-position: -144px -259px;
+}
+.book .icon{
+  width: 13px;
+  height: 16px;
+  background-position: -140px -78px;
+}
+.wtoon .icon{
+  width: 27px;
+  height: 16px;
+  background-position: -279px -78px;
+}
+/********초록색 nav end*******************************************************/
+.bar{
+  display: inline-block;
+  margin: 18px 16px 0;
+  width: 1px;
+  height: 14px;
+  border-left: solid 1px #ebeef3;
+}
+.more_btn{
+  position: relative;
+  display: inline-block;
+  margin-top: 16px;
+}
+.more{
+  display: block;
+  width: 55px;
+  height: 16px;
+  background-position: 0 -104px;
+}
+.roll-area{
+  position: absolute;
+  width: 198px;
+  height: 20px;
+  right: 0px;
+  top:50%;
+  margin-top: -9px;
+  line-height: 20px;
+}
+.real-number{
+  color: #00ab33;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  line-height: 20px;
+}
+.real-search{
+  line-height: 20px;
+  font-size: 14px;
+}
+.icon_open{
+  width: 11px;
+  height: 6px;
+  position: absolute;
+  right: 4px;
+  top:50%;
+  margin-top: -3px;
+  line-height: 20px;
+  background-position: -187px -73px;
+}
+/******container*****************************************************************************/
+.bottom-left>div.box1{ /*그냥 하면 적용안되어서 부모클래스의 어디어디라고 지정을 해줬음*/
+  height: 120px;
+  border-color: rgb(254,233,202);
+}
+/*box2 start******************/
+.box2{
+  height: 46px; 
+  position: relative;
+}
+.box2-inner{
+  padding: 15px 0 0 16px;
+  font-size: 0;
+}
+.box2-inner::after{/* :: 가상 클래스*/
+  clear: both;/*플로트를 만들면 공간이 뜨게 되는데 clear를 사용하여 플로트를 무시할 수 있게한다.*/
+  content: ""; 
+  display: block;/*h3가 float라서 디스플레이 block으로 빈 공간을 만들어줘서 높이를 생성해줬다.*/
+}
+.news{/*h3*/
+  font-size: 0;
+  float: left;
+  display: inline-block;
+}
+.box2-news-head{
+  font-weight: 700;
+  color: #000;
+  font-size: 14px;
+  font-family: NanumSquare,Dotum,"돋움",Helvetica,AppleSDGothicNeo,sans-serif;
+  text-decoration: none;
+  line-height: 16px;
+  margin-right: 12px;
+  letter-spacing: -1px;
+}
+.box2-news-head:hover{
+  text-decoration: none;
+}
+.icon-next{
+  background-image: url(https://s.pstatic.net/static/www/img/2018/sp_newscast_v180511.png);
+  background-position: -256px -100px;
+  display: inline-block;
+  width: 5px;
+  height: 9px;
+  margin: 3px 0 0 5px;
+}
+.news-cast-txt{
+  float: left;
+  width: 340px;
+  height: 20px;
+  color: #222;
+  font-size: 12px;
+  line-height: 18px;
+}
+.news-cast-txt>a{
+  color: #000;
+}
+.news-cast-txt>a:visited{
+  color: #888;
+}
+.box2-inner2{
+  position: absolute;
+  top: 50%;
+  right: 2px;
+  margin-top: -7px;
+}
+.box2-inner2::after{
+  clear: both;
+  content: "";
+  display: block;
+}
+.ul-item{
+  display: inline-block;
+  float: left;
+  margin-right: 14px;
+  font-size: 12px;
+}
+.ul-item>a{
+  display: block;
+  height: 15px;
+  line-height: 16px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #666;
+}
+.ul-item>a:hover{
+  color: #000;
+}
+.ul-item>.green{
+  color: #00ab33;
+}
+.ul-item>.green:hover{
+  color: #0b9500;
+}
+/****box3 start**********************************************/
+.box3{
+  height: 246px;
+}
+.box3-inner1{
+  height: 45px;
+  border-bottom: 1px solid #ebeef3;
+  position: relative;
+}
+.box3-inner2{
+  height: 200px;
+}
+.box3-item1{
+  padding: 13px 0 0 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 0;
+}
+.box3-item1>a{
+  font-size: 14px;
+  line-height: 20px;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+.box3-item2{
+  position: absolute;
+  padding: 13px 0;
+  top: 0;
+  left: 102px;
+  height: 44px;
+  line-height: 20px;
+  letter-spacing: -1px;
+}
+.box3-menu::after,
+.box3-item3::after,
+.box3-item2::after{
+  clear: both;
+  content: "";
+  display: block;
+}
+.my,
+.all{
+  display: inline-block;
+  font-weight: bold;
+  float: left;
+  cursor: pointer;
+}
+.my{
+  color: #666;
+}
+.box3-item2>.item3{
+  margin: 2px 15px 0;
+  float: left;
+}
+.box3-item3{
+  height: 44px;
+  width: 216px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.box3-menu{
+  width: 126px;
+  height: 44px;
+  display: inline-block;
+  float: left;
+}
+.box3-item3>.box3-dir{
+  width: 90px;
+  height: 44px;
+  widows: 0;
+}
+.box3-dir>.box3-prev,
+.box3-dir>.box3-next{
+  width: 44px;
+  height: 44px;
+  padding: 16px 0;
+}
+.box3-menus{
+  width: 32px;
+  height: 44px;
+  margin-right: 10px;
+  float: left;
+}
+.box3-icons{
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin-top: 13px;
+  background-image: url('https://s.pstatic.net/static/www/img/2018/sp_newscast_v180511.png');
+}
+.box3-icons.menu{
+  background-position: -228px -124px;
+}
+.box3-icons.list{
+  background-position: 0 -193px;
+}
+.box3-icons.setting{
+  background-position: -28px -193px;
+}
+/******right nav start***********************************************************************/
+.box4{
+  height: 120px;
+  position: relative;
+}
+.box4_inner{
+  height: 120px;
+  padding: 15px 25px;
+}
+.box4_inner>p{
+  color: #888;
+  font-size: 12px;
+  line-height: 14px;/*글자높이를 조정해주는 속성 라인 헤이트는 글자 크기보다 같거나 크게 해야한다.*/
+}
+.lg_local_btn{
+  height: 37px;
+  margin-top: 12px;
+  display: block;
+  background-image: url(https://s.pstatic.net/static/www/img/2018/sp_login_v180727.png);
+  background-position: 0 -47px;
+  background-repeat: no-repeat;
+}
+.text_blind{
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  /*반드시 이 속성은 absolute와 함께 사용하여야 한다. 마스크를 씌우는 기능이라는 듯함.*/
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+}
+.lg_links{
+  height: 38px;
+  width: 280px;
+  position: absolute;
+  bottom: 0px;
+  left: 25px;/*여기서는 안써도 제대로 되지만 써주는게 맞다.*/
+  font-size:0;
+}
+.lg_links>a{
+  line-height: 38px;
+  font-size: 12px;
+  color: #666;
+}
+.join_User{
+  float: right;
+}
+/*********box5 start*********************/
+.box5{
+  height: 142px;
+}
+.area_header{
+  padding-left: 15px;
+  height: 34px;
+  border-bottom: 1px solid #ebeef3;
+  position: relative;
+}
+.box5-bootom{
+  height: 106;
+}
+.box5-item1{
+  display: inline-block;
+  width: 208px;
+  height: 33px;
+  padding: 10px 0 7px;
+  position: relative;
+}
+.header_li{
+  display: inline-block;
+  font-size: 0;
+}
+.date, .day{
+  font-weight: 700;
+  line-height: 17px;
+  font-size: 14px;
+  letter-spacing: -1px;
+  color: #000;
+}
+.day{
+  margin-left: 3px;
+  font-size: 13px;
+  line-height: 16px;
+  vertical-align: top;
+}
+.date:hover{
+  text-decoration: underline;
+}
+
+.header_info a:hover{
+  text-decoration: none;
+}
+.fas{
+  color: rgb(227,231,238);
+}
+.location{
+  position: relative;
+  top: -1px;
+  display: inline;
+  max-width:130px;
+  color: #888;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+.fas.fa-angle-right{
+  font-weight: 700;
+  color: #888;
+}
+/*************************item1 end*/
+.box5-item2{
+  position: absolute;
+  top: 10px;
+  right: 0;
+  margin-right: 78px;
+  color: #888;
+  font-size: 12px;
+  line-height: 14px;
+  font-family: Tahoma, sans-serif;
+  font-weight: 100;
+}
+.color-black{
+  color: #000;
+  font-size: 12px;
+}
+/***********************item2 end*/
+.box5-item3, .box3-dir{
+  width: 68px;
+  height: 33px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 0;/*화살표가 엔터때문에 인라인 블럭이어도 밑으로 내려가게됨 그래서 공백 지우려고 써줬다*/
+}
+.box5-item3-prev, .box5-item3-next, .box3-prev, .box3-next{
+  display: inline-block;
+  text-align: center;
+  width: 34px;
+  height: 33px;
+  border-left:solid 1px #ebeef3;
+  padding: 11px 0;
+}
+.btn-prev, .btn-next{
+  background-image: url(https://s.pstatic.net/static/www/img/2017/sp_timesquare_v170913a.png); 
+}
+.btn-prev{
+  background-position: -433px -303px;
+  width: 6px;
+  height: 11px;
+  display: inline-block;
+}
+.btn-next{
+  background-position: -433px -324px;
+  width: 6px;
+  height: 11px;
+  display: inline-block;
+}
+/********bax6 start************************/
+.box6{
+  height: 150px;
+}
