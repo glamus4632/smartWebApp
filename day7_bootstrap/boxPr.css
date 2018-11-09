@@ -1,0 +1,41 @@
+@charset 'utf-8';
+*{
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.out-box{
+  height: 400px;
+  width: 100%;
+  border: solid 1px rgb(255, 0, 0);
+}
+
+.in-box{
+  border: solid 1px black;
+  height: calc(400px - 20px);
+  width: calc(100% - 20px);
+}
+/*일단 박스 만들었고 이제 3가지 방법으로 in-box를 안에 넣어보자!*/
+/* 패딩으로 넣었다 */
+.padding{
+  padding: 10px;
+}
+.padding>.in-box{
+  width: 100%; /*width만 넣은 이유는 위에서 width값을 100%로 했기 때문에
+  총 너비가 정해지지 않아 무조건 오른쪽 여백에 20이 더 부족하게된다.*/
+}
+/* 마진으로넣었다 */
+.margin{
+  margin: 10px;
+}
+/* 포지션 앱솔루트로 넣었다 */
+.out-position{
+  position: relative;
+}
+.position{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}

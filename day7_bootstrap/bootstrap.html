@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <!--부트스트랩4에서 브라우저 별 크기의 종류
+  .col-    : ~575px 1~12까지 범위가 있는데 이걸 이용해서 브라우저 크기별로 늘었다 줄었다 하는
+            반응형 웹 제작이 가능해진다.
+  .col-sm- : 스몰 555~767px
+  .col-md- : 미디움 768~991px
+  .col-lg- : 라지 992~1199px
+  .col-xl- : x라지 1200px~
+  -->
+  <!--컨테이너 클래스는 브라우저 크기마다 지정된 넓이(width)가 있어서
+  해당 넓이를 제외한 부분을 margin으로 계산한다.-->
+  
+  <!--바디태그의 자식div태그로 많이 사용한다. 전체를 박스들을 감싸는 제일 큰 main-->
+  <div class="container">
+    안녕하세요.
+  </div>
+  <!--너비의 길이를 현재 브라우저의 너비로 계산-->
+  <div class="container-fluid">
+    안녕하세요.
+  </div>
+  <!--컨테이너는 max-width가 정해져 있고 컨테이너 플루이드는 width가 100%다-->
+  <div class="container-fluid">
+    <div>
+        <input type="text">
+    </div>  
+    <div class="form-group">
+        <input type="text" class="form-control">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="comment">Comment:</label>
+    <textarea class="form-control" rows="5" id="comment"></textarea>
+  </div>
+  <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-4">
+    <!--이 순서는 그냥 외우면 된다. 작은거부터 단위가 커지고 숫자는 점점 작아져야 비율이 유지됨-->
+    <div class="form-group">
+      <input type="text" class="form-control">
+    </div>
+  </div>
+  
+</body>
+</html>

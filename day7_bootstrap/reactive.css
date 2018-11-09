@@ -1,0 +1,64 @@
+@charset 'utf-8';
+*{
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.container-fluid{
+  width: 100%;
+}
+.container{
+  margin: 0 auto;
+  border: 1px solid black;
+}
+@media(max-width:575px){/*575px보다 작은 화면에서는 가로너비가 100%*/
+  .container{
+    width: 100%;
+  }
+  .btn{
+    width: 100%;
+  }
+}
+/* 큰 애들을 나중에 써야 덮어 씌워져서 돌아간다.
+순서에 상관없이 동작하게 하고 싶을 때는 아예 범위를 지정해버리면 된다.
+@media (min-width: 576px) and (Max-width: 767px)*/
+@media (min-width: 576px){ /**/
+  /*가로 사이즈가 575보다 클 때 컨테이너를 호출하여 540으로 고정*/
+  .container{
+    width: 540px;
+  }
+  .btn{
+    width: 80%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px){/*max-width: */
+  /*가로 사이즈가 768보다 클 때 컨테이너를 호출하여 540으로 고정*/
+  .container{
+    width: 720px;
+  }
+  .btn{
+    width: 60%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px){
+  .container{
+    width: 1200px;
+  }
+  .btn{
+    width: 40%;
+  }
+}
+@media (min-width: 1200px){
+  .container{
+    width: 1140px;
+  }
+  .btn{
+    width: 20%;
+  }
+}
+/******버튼**********************************************************/
+.btn{
+  background-color: cadetblue;
+  color: white;
+  border: 1px solid gray;
+}

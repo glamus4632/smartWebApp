@@ -1,0 +1,7 @@
+@charset 'utf-8';
+.container{
+  display: grid;
+  grid-template-columns: 100px auto;
+  grid-template-rows: 50px 50px 200px;
+  grid-gap: 3px;
+}

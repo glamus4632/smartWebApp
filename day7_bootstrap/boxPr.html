@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="boxPr.css">
+  <title>Document</title>
+</head>
+<body>
+  <!--3가지 방법으로 박스안에 박스를 넣어보자-->
+  <!--패딩으로 넣는다-->
+  <div class="out-box padding">
+    <div class="in-box">padding box!</div>
+  </div>
+  <!--마진으로 넣는다-->
+  <div class="out-box">
+    <div class="in-box margin">margin box!</div>
+  </div>
+  <!--포지션 앱솔루트로 넣는다-->
+  <div class="out-box out-position">
+    <div class="in-box position">absolute box!</div>
+  </div>
+</body>
+</html>
