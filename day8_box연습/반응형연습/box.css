@@ -1,0 +1,78 @@
+@charset 'utf-8';
+*{
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.box{
+  width: 100%;
+  height: 300px;
+  border: solid 3px black;
+}
+
+@media(max-width:500px){/*가로 넓이 500까지는 빨간색*/
+  .box{
+    border-color:  red;
+  }
+}
+@media(min-width: 501px){/*501부터 파란색(501~750까지)*/
+  .box{
+    border-color:  blue;
+  }
+}
+@media(min-width: 751px){
+  .box{
+    border-color:  green;
+  }
+}
+@media(min-width: 1001px){
+  .box{
+    border-color:  black;
+  }
+}
+
+/* 맥스로 잡았을 경우
+@media(max-width: 1001px){
+  .box{
+    border-color:  black;
+  }
+}
+@media(max-width: 1000px){
+  .box{
+    border-color:  green;
+  }
+}
+@media(max-width: 750px){
+  .box{
+    border-color:  blue;
+  }
+}
+@media(max-width:500px){
+  .box{
+    border-color:  red;
+  }
+}*/
+
+/* 민-맥스로 잡았을 경우
+
+.box{
+  border: solid 1px red;
+}
+
+@media(min-width: 501px) and (max-width: 750px){
+  .box{
+    border-color:  blue;
+  }
+}
+@media(min-width: 751px) and (max-width: 1000px){
+  .box{
+    border-color:  green;
+  }
+}
+@media(min-width: 1001px){
+  .box{
+    border-color:  black;
+  }
+}
+}*/

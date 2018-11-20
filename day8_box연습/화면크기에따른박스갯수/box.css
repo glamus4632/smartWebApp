@@ -1,0 +1,36 @@
+@charset 'utf-8';
+*{
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+div{
+  border: solid 1px black;
+}
+.container{
+  border: 0;
+}
+.container::after{
+  clear: both;
+  content: "";
+  display: block;
+}
+.box1, .box2, .box3{
+  width: calc(100% / 3);
+  height: 200px;
+  display: inline-block;
+  float: left;
+}
+@media(max-width: 500px){
+  .box1{
+    width: 100%;
+  }
+  .box2, .box3{
+    display: none;
+  }
+}
+@media(min-width: 501px) and (max-width: 1000px){
+  .box1, .box2, .box3{
+    width: 50%;
+  }
+}
