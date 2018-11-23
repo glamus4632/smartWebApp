@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="id">
+  <br>
+  <input type="text" id="pw" onchange="change(this)">
+  <br>
+  <input type="text" id="repw">
+  <script>
+    var idObj = document.getElementById('id');
+    idObj.onchange = function(){//onchange는 값이 변경된 후 포커스가 다른 것으로 바뀌었을 때 호출된다
+      console.log(this.value);
+    }//id
+
+    function change(obj){
+      console.log(obj.value);
+    }//pw
+
+    function change2(){//input3(repw)가 호출함
+      var text = this.value;//thiw.value는 repw에 입력된 값
+      console.log(text);
+      this.style.color = 'red';
+      this.style.backgroundColor = 'yellow';
+      this.style.borderColor = 'blue';
+    }
+    var input3 = document.getElementById('repw');
+    if(input3.addEventListener){//나머지버전(사파리,크롬 등)
+      input3.addEventListener('change', change2);
+    }
+    else{//익스플로러9 이하버전
+      input3.attachEvent('onchange', change2);
+    }
+    var arr = [400,200,300,7];
+    console.log(arr);
+    arr.sort();
+    console.log(arr);//sort는 문자열로 비교하기 때문에 200, 300, 400, 7로 나온다
+    arr.sort(function(a,b){
+      return a-b;//안에서 내부적으로 배열안의 값을 비교하여 음수면 앞으로 양수면 뒤로 보낸다
+      //return b-a;는 큰 수가 앞으로 작은수가 뒤로 나온다.
+    });
+    console.log(arr);
+  </script>
+</body>
+</html>

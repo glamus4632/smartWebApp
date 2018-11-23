@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="show()">클릭</button><!--버튼을 누르면 hello가 출력-->
+  <div id="content"></div>
+  HELLO^^<br>
+  <!--
+    학년마다 반이 달라서 선택한 학년에 따라 반도 바뀌도록 해 준다.
+    학년을 선택하고 확인 버튼을 누르면 선택할 수 있는 반의 범위가 달라지게 한다.
+    1학년은 1~3
+    2학년은 1~4
+    3학년은 1~5
+  -->
+  학년
+  <select name="" id="grade" onchange="getClass()"><!--온체인지를 쓰면 button을 누르지 않아도 알아서 바뀐다-->
+    <option value="1" class="gradeNum">1</option>
+    <option value="2" class="gradeNum">2</option>
+    <option value="3" class="gradeNum">3</option>
+  </select>
+  <button onclick="getClass()">선택</button>
+  반
+  <select name="" id="class"></select>
+
+  <script>
+    function show(){
+      /*
+        (이벤트가 발생 될 곳의 엘리먼트를 먼저 호출하고 객체를 생성한다)
+        1. 태그생성
+        2. 태그에 넣을 텍스트 생성
+        3. 태그에 텍스트를 자식으로 붙임
+        4. 태그를 html 엘리먼트의 자식으로 붙임
+      */
+      var content = document.getElementById('content');//넣을 공간의 id 호출
+      var subDiv = document.createElement('div');//div를 생성
+      var text = document.createTextNode('hello!!');//텍스트를 생성
+      
+      subDiv.appendChild(text);//생성한 텍스트를 div의 자식으로
+      content.appendChild(subDiv);//텍스트가 입력된 div를 호출해 둔 id의 자식으로
+      
+      console.log(content);
+      console.log(subDiv);
+      // var str = "안녕하세요";
+      // document.write(str);//write는 문서 전체를 바꿈
+    }
+    /*************셀렉트 변경 함수******************************************************/
+    function getClass(){
+      var classSelect = document.getElementById('class');
+      var gradeNum = document.getElementById('grade').value;
+      
+      clearSelect(classSelect);//이걸 setSelect함수 밑으로 내리면 지워버리는게 나중에 나와서 안된다
+      //셀렉트박스의 내용을 지우는 함수
+      setSelect(classSelect, gradeNum);//calssSelect: 반 select객체/ gradeNum: 학년
+      //셀렉트박스에 내용을 추가하는 함수
+    }
+
+    function setSelect(classSelect, gradeNum){
+      var arr = [3,4,5];
+      for(var i=1; i<=arr[gradeNum-1]; i++){
+        var option = document.createElement('option');//<option>태그 생성
+        option.value = i;//option의 value를 i로
+        var text = document.createTextNode(i);//텍스트를 arr[]안의 숫자만큼생성 i가 1~3(arr[3,4,5])씩 증가되면서 생성
+        option.appendChild(text);//option태그 의 자식으로(안에) 텍스트 삽입
+        classSelect.appendChild(option);//<option>을 classSelect(넣어야 할 select태그의 id="class")에 삽입
+        list.push(option);
+      }
+    }
+    function clearSelect(classSelect){
+      for(var i=0; i<list.length; i++){
+        classSelect.removeChild(list[i]);
+      }
+      list = new Array();
+    }
+    //반 셀렉트 박스에 추가한 option태그 정보들을 저장하기위한 배열
+    var list = new Array();
+    getClass();//겟 클래스의 실행
+  </script>
+</body>
+</html>

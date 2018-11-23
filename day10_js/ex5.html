@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <!--
+  <input type="text" id="inputId">
+  <button onclick="aleatMessege()">클릭</button>
+  -->
+  
+  <!--비밀번호 입력창과 비밀번호 확인창을 만들고버튼을 누르면 비밀번호 확인이 일치하는 지를 createElement로 띄우자-->
+  비밀번호입력: <input type="text" id="pw"><br>
+  비밀번호확인: <input type="text" id="repw">
+  <div id="box"></div>
+  <button onclick="pwdCheck()">확인</button><br><br>
+  
+  <!--createElement예제-->
+  <!--상세보기 버튼을 클릭하면 div에 상세내용을 출력하는 예제-->
+  <button onclick="showDetail()">상세보기</button>
+  <div id="detail"></div>
+  
+  
+  
+  <script>
+    /*
+    function aleatMessege(){
+      var num = parseInt(document.getElementById('inputId').value);
+      if(num === 123) alert('정수 123을 눌렀습니다');
+    }
+    */
+    var subBox = document.createElement('div');//지우고 생성하기 위한 박스
+
+    function pwdCheck(){
+      var pw = document.getElementById('pw').value;
+      var repw = document.getElementById('repw').value;
+      var result=document.getElementById('box');
+      result.appendChild(subBox);//오류나서 일단 한 번 생성
+      result.removeChild(subBox);//생성한 것을 지움
+      printMsg(result, pw, repw);//인자값을 넘기고 메세지 출력
+    }
+    function printMsg(result,pw, repw){
+      subBox = document.createElement('div');//박스 생성
+      var checkMsg;
+      if(pw == repw) checkMsg = document.createTextNode("일치합니다");
+      else checkMsg = document.createTextNode("일치하지않습니다.");
+      subBox.appendChild(checkMsg);
+      result.appendChild(subBox);
+      return result;
+    }
+    
+    /*************상세보기 함수*******************/
+    function showDetail(){
+      var detailNode = document.getElementById('detail');
+      var subDetail = document.createElement('span');
+      var text = document.createTextNode('상세내용은 ~~~입니다');
+      subDetail.appendChild(text);
+      clear();
+      detailNode.appendChild(subDetail);
+    }
+    function clear(){
+      var detailNode = document.getElementById('detail');
+      var subDetail = document.querySelector('#detail span');
+      console.log(subDetail);
+      if(subDetail != null) detailNode.removeChild(subDetail);//값이 있으면 지워라
+    }
+  </script>
+</body>
+</html>

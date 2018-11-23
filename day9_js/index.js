@@ -1,5 +1,6 @@
 //body태그 안의 내용들이 구성된 후 실행될 function(){}안에 있는 코드들이 실행된다.
 window.onload = function() {
+  //printMulti()
 }
 
 // 구구단 전체를 출력하는 함수
@@ -23,6 +24,8 @@ function printMul(a, i){
   var rst = "" + a + "x" + i + "=" + res;
   console.log(rst);
 }
+
+
 var ary = new Array('apple','banana','kiwy');
 var ary2 = new Array(1, 2, 3, 'a', 'A');
 //기본형태 배열
