@@ -4,23 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="login.css">
+  
   <title>join</title>
 </head>
 <body>
   <div class="box">
-    <form action="#">
+    <form>
       <div class="idbox">
-        <span class="sp">ID: </span><input type="text" class="id" placeholder="아이디를 적어주세요">
+        <span class="sp">ID: </span><input type="text" class="id" id = "usrId" placeholder="아이디를 적어주세요" value="">
+        <span id="idErrorMsg" class="textSapn"></span>
       </div>
       <div class="pwbox">
-        <span class="sp">PW: </span><input type="password" class="pw" placeholder="비밀번호를 적어주세요">
+        <span class="sp">PW: </span><input type="password" class="pw" id = "usrPw" placeholder="비밀번호를 적어주세요" value="">
+        <span id="pwErrorMsg" class="textSapn"></span>
       </div>
       <div class="repwbox">
-        <span class="sp">PW확인: </span><input type="password" class="pw" placeholder="한번 더 비밀번호를 적어주세요">
+        <span class="sp">PW확인: </span><input type="password" class="pw" id = "usrRePw" placeholder="한번 더 비밀번호를 적어주세요" value="">
+        <span id="rePwErrorMsg" class="textSapn"></span>
       </div>
       <div class="ebox">
-        <span class="sp">e-mail: </span><input type="email" class="e" placeholder="양식에 맞게 적어주세요">
+        <span class="sp">e-mail: </span><input type="email" class="e" id = "usrEmail" placeholder="양식에 맞게 적어주세요">
       </div>
       <div class="rabtn">
         <label class="labtn">
@@ -31,8 +34,61 @@
         </label>
       </div>
       
-      <button class="btn">가입하기</button>
+      <button class="btn" onclick="checkform()">가입하기</button>
     </form>
   </div>
+
+  <script>
+
+  
+  var id = document.getElementById('usrId');
+    var pw = document.getElementById('usrPw');
+    var repw = document.getElementById('usrRePw');
+
+    var regex = /^[A-z0-9]*([A-z]\d|\d[A-z])[A-z0-9]*$/;
+    
+    function checkform(){
+      idCheckForm();
+    }
+
+    function idCheckForm(){
+      if(id.length >= 4 && id.length < 17){
+        if(!(regex.test(id))) createText('id');
+        else pwCheckForm();
+      }else return true;
+    }
+
+    function pwCheckForm(){
+      if(pw.length >= 4 && pw.length < 17){
+        if(!(regex.test(pw))) createText(pw);
+        else rePwCheckForm();
+      }else return true;
+    }
+
+    function rePwCheckForm(){
+      if(repw.length >= 4 && repw.length < 17){
+        if(!(regex.test(repw))) createText(repw);
+        
+      }else{
+        repw = "비밀번호가 일치합니다.";
+        createText(repw);
+        return true;
+      }
+    }
+
+    function createText(text){
+      var idErrorMsg = document.getElementById('idErrorMsg');
+      var pwErrorMsg = document.getElementById('pwErrorMsg');
+      var rePwErrorMsg = document.getElementById('rePwErrorMsg');
+      console.log(text);
+      if(text == id){
+        idErrorMsg.style.display = 'block';
+      }
+      
+      
+    }
+    
+    
+  </script>
 </body>
 </html>

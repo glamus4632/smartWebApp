@@ -61,20 +61,21 @@
 
     function setSelect(classSelect, gradeNum){
       var arr = [3,4,5];
-      for(var i=1; i<=arr[gradeNum-1]; i++){
-        var option = document.createElement('option');//<option>태그 생성
-        option.value = i;//option의 value를 i로
+      for(var i=1; i<=arr[gradeNum-1]; i++){//1학년은 0번째(3), 2학년은 1번째(4), 3학년은 2번째(5)
+        var option = document.createElement('option');//i<=arr[gradeNum-1]만큼 <option>태그 생성
+        option.value = i;//option의 value를 i로증가
         var text = document.createTextNode(i);//텍스트를 arr[]안의 숫자만큼생성 i가 1~3(arr[3,4,5])씩 증가되면서 생성
         option.appendChild(text);//option태그 의 자식으로(안에) 텍스트 삽입
         classSelect.appendChild(option);//<option>을 classSelect(넣어야 할 select태그의 id="class")에 삽입
-        list.push(option);
+        list.push(option);//배열을 하나 만들어서 만들어진 option을 하나씩 저장
       }
     }
     function clearSelect(classSelect){
       for(var i=0; i<list.length; i++){
-        classSelect.removeChild(list[i]);
+        classSelect.removeChild(list[i]);//배열의 크기만큼 i를 증가시키고 배열의순서(i번째)마다 classSelect의 자식
+        //option들을 하나씩 지워준다
       }
-      list = new Array();
+      list = new Array();//빈 배열로 초기화
     }
     //반 셀렉트 박스에 추가한 option태그 정보들을 저장하기위한 배열
     var list = new Array();

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="login.css">
+  <title>유효성검사
+  </title>
+</head>
+<body>
+  <div class="box">
+    <form>
+      <div class="idbox">
+        <span class="sp">ID: </span>
+        <input type="text" class="id" id = "usrId" name="usrId" placeholder="아이디를 적어주세요" onchange="checkId()">
+        <div id="boxId1">
+          아이디는 5자 이상 10자 까지입니다.
+        </div>
+        <div id="boxId2">
+          아이디는 영문자로 시작하고 영문과 숫자로 이루어져야합니다.
+        </div>
+      </div>
+      <div class="pwbox">
+        <span class="sp">PW: </span>
+        <input type="password" class="pw" id = "usrPw" name="usrPw" placeholder="비밀번호를 적어주세요" onchange="checkPw()">
+        <div id="boxPw1">
+          비밀번호는 8자 이상 20자 까지입니다.
+        </div>
+        <div id="boxPw2">
+          비밀번호는 영문과 숫자를 1개 이상 포함해야합니다.
+        </div>
+      </div>
+      <div class="repwbox">
+        <span class="sp">PW확인: </span><input type="password" class="pw" id = "usrRePw" name="usrRePw" placeholder="한번 더 비밀번호를 적어주세요" onchange="checkRePw()">
+        <div id="boxRePw">
+          비밀번호가 일치하지 않습니다.
+        </div>
+      </div>
+      <div class="ebox">
+        <span class="sp">e-mail: </span><input type="email" class="e" id = "usrEmail" placeholder="양식에 맞게 적어주세요">
+      </div>
+      <div class="rabtn">
+        <label class="labtn">
+          <input type="radio" class="radio" name="gender" value="male" checked>남성
+        </label>
+        <label class="labtn">
+          <input type="radio" class="radio" name="gender" value="female">여성
+        </label>
+      </div>
+      <button class="btn" type="submit" onclick="return check()">가입하기</button>
+    </form>
+  </div>
+
+  <script>
+  /*
+    정규표현식과 주어진 텍스트를 비교화여 유효성 검사를 확인
+    입력1: 정규표현식, 입력2: 텍스트
+    리턴: 유효성 검사 결과로 true는 일치, false는 불일치
+    */
+    function checkVaildation(regex, text){//id pw 상관없이 검사
+      if(regex.test(text))
+        return true;
+      return false;
+    }
+    /*
+    id 유효성검사 확인하여 일치여부를 알려주고 불일치시 메세지를 출력
+    리턴: 유효성 검사 결과로 true는 일치, false는 불일치
+    */
+    function checkId(){
+      var id = document.getElementById('usrId').value;
+      var regex = /^[A-z]([A-z0-9]){4,9}$/;//영문시작 5~10글자
+      clearBox('boxId1');
+      clearBox('boxId2');
+      if(id.length < 5 || id.length > 10){
+        showBox('boxId1');//유효성검사
+        return false;
+      }
+      if(!(checkVaildation(regex, id))){
+        showBox('boxId2');//정규화검사
+        return false;
+      }
+      return true;
+    }
+    /*
+    pw 유효성검사 확인하여 일치여부를 알려주고 불일치시 메세지를 출력
+    리턴: 유효성 검사 결과로 true는 일치, false는 불일치
+    */
+    function checkPw(){
+      var pw = document.getElementById('usrPw').value;
+      var regex = /^\w*([A-z]\d|\d[A-z])\w*$/;//영문시작 5~10글자
+      clearBox('boxPw1');
+      clearBox('boxPw2');
+      if(pw.length < 8 || pw.length > 20){
+        showBox('boxPw1');//유효성검사
+        return false;
+      }
+      if(!(checkVaildation(regex, id))){
+        showBox('boxPw2');//정규화검사
+        return false;
+      }
+      return true;
+    }
+    /*
+    repw pw와 repw의 비교
+    리턴: 유효성 검사 결과로 true는 일치, false는 불일치
+    */
+    function checkRePw(){
+      var repw = document.getElementById('usrRePw').value;
+      var pw = document.getElementById('usrPw').value;
+      clearBox('boxRePw');
+      if(pw != repw){
+        showBox('boxRePw');
+        return false;
+      }
+      return true;
+    }
+    /*버튼을 누르고 검사가 완료되었는지 체크*/
+    function check(){
+      var isSubmit = true;
+      if(!checkId()) isSubmit = false;//아이디 유효성검사가 실패하면 데이터전송을 막는다
+      if(!checkPw()) isSubmit = false;//비밀번호가..
+      if(!checkRePw()) isSubmit = false;//비밀번호 확인이..
+      return isSubmit;
+    }
+    //메세지박스를 안보이게 감추는 함수    
+    function clearBox(messegeBox){
+      var element = document.getElementById(messegeBox);
+      if(element != null)
+        element.style.display = 'none';
+    }
+    //메세지박스를 보여주는 함수
+    function showBox(messegeBox){
+      var element = document.getElementById(messegeBox);
+      if(element != null)
+        element.style.display = 'block';
+    }
+    //모든 에러관련 메세지를 감추는 함수
+    function clear(){
+      clearBox('boxId1');
+      clearBox('boxId2');
+      clearBox('boxPw1');
+      clearBox('boxPw2');
+      clearBox('boxRePw');
+
+    }
+    clear();
+    
+    
+  </script>
+</body>
+</html>

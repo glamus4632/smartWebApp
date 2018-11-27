@@ -18,11 +18,7 @@ body{
   text-align: right;
   color: white;
 }
-.textSapn{
-  font-size: 10px;
-  color: white;
-  display: none;
-}
+
 .idbox, .pwbox, .repwbox, .ebox{
   margin: 0 auto;
   width: 400px;
