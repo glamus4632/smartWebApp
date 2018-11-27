@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  
+</head>
+<body>
+  <div>
+    <input type="text" id="pw">
+    <span id="pwcheck1" style="display: none">"정규표현식에 맞습니다."</span>
+    <span id="pwcheck2" style="display: none">"정규표현식에 맞지않습니다."</span>
+    <span id="pwcheck3" style="display: none">"비밀번호는 8글자에서 20자 까지 입력해주세요."</span>
+  </div>
+  <button onclick="checkRegex()">확인</button>
+
+  <script>
+    function checkRegex(){
+      var text = document.getElementById('pw').value;
+      var regex = /^[A-z0-9]*([A-z]\d|\d[A-z])[A-z0-9]*$/;
+      var textbox1 = document.getElementById('pwcheck1');
+      var textbox2 = document.getElementById('pwcheck2');
+      var textbox3 = document.getElementById('pwcheck3');
+      var isok = true;
+      //주석은 함수로 처리했을 때의 경우
+      if(text.length >= 8 && text.length < 20){
+        if(regex.test(text)){
+          //messege = document.createTextNode("정규표현식에 맞습니다.");
+          textbox1.style.display = 'inline-block';
+          textbox2.style.display = 'none';
+          textbox3.style.display = 'none';
+        }
+        else {
+          //messege = document.createTextNode("정규표현식에 맞지않습니다.");
+          //messegebox.style.color = 'red';
+          textbox2.style.display = 'inline-block';
+          textbox2.style.color = 'red';
+          textbox1.style.display = 'none';
+          textbox3.style.display = 'none';
+          isok = false;
+        }
+      }
+      else{
+        //messege = document.createTextNode("비밀번호는 8글자에서 20자 까지 입력해주세요.");
+        //messegebox.style.color = 'red';
+        textbox3.style.display = 'inline-block';
+        textbox3.style.color = 'red';
+        textbox1.style.display = 'none';
+        textbox2.style.display = 'none';
+        isok = false;
+      }
+      return isok;
+      //cleare();
+      //PringMsg(text, regex);
+    }
+/*
+    function PringMsg(text, regex){
+      var pwcheck = document.getElementById('pwcheck1');//span을 만들 공간 생성
+      var messegebox = document.createElement('span');//span태그 생성
+      var messege = "";
+      var isok = true;
+      if(text.length >= 8 && text.length < 20){
+        if(regex.test(text)){
+          messege = document.createTextNode("정규표현식에 맞습니다.");
+          textbox1.style.display = 'inline-block';
+        }
+        else {
+          messege = document.createTextNode("정규표현식에 맞지않습니다.");
+          messegebox.style.color = 'red';
+          textbox2.style.display = 'inline-block';
+          isok = false;
+        }
+      }
+      else{
+        messege = document.createTextNode("비밀번호는 8글자에서 20자 까지 입력해주세요.");
+        messegebox.style.color = 'red';
+        textbox3.style.display = 'inline-block';
+        isok = false;
+      }
+      messegebox.appendChild(messege);
+      pwcheck.appendChild(messegebox);
+      return isok;//일단 메세지부터 전달하고 나서 가지고 나온 참거짓 값을 대입해 트루펄스 출력
+    }
+    
+    function cleare(){
+      var pwcheck = document.getElementById('pwcheck');//span이 만들어진 공간인 pwcheck를 선택
+      var messegebox = document.querySelector('#pwcheck span');//id="pwcheck"에 span이 있으면 messegebox에 저장
+      if(messegebox != null) pwcheck.removeChild(messegebox);//subBox에 값이 들어있으면 box안의 subBox를 삭제
+    }*/
+  
+    </script>
+</body>
+</html>

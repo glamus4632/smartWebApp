@@ -15,15 +15,13 @@
   <!--비밀번호 입력창과 비밀번호 확인창을 만들고버튼을 누르면 비밀번호 확인이 일치하는 지를 createElement로 띄우자-->
   비밀번호입력: <input type="text" id="pw"><br>
   비밀번호확인: <input type="text" id="repw">
-  <div id="box"></div>
+  <div id="box" style="display: inline-block"></div><br>
   <button onclick="pwdCheck()">확인</button><br><br>
   
   <!--createElement예제-->
   <!--상세보기 버튼을 클릭하면 div에 상세내용을 출력하는 예제-->
   <button onclick="showDetail()">상세보기</button>
   <div id="detail"></div>
-  
-  
   
   <script>
     /*
@@ -32,24 +30,37 @@
       if(num === 123) alert('정수 123을 눌렀습니다');
     }
     */
-    var subBox = document.createElement('div');//지우고 생성하기 위한 박스
-
     function pwdCheck(){
       var pw = document.getElementById('pw').value;
       var repw = document.getElementById('repw').value;
       var result=document.getElementById('box');
-      result.appendChild(subBox);//오류나서 일단 한 번 생성
-      result.removeChild(subBox);//생성한 것을 지움
+      clearbox();
       printMsg(result, pw, repw);//인자값을 넘기고 메세지 출력
     }
     function printMsg(result,pw, repw){
-      subBox = document.createElement('div');//박스 생성
+      subBox = document.createElement('span');//박스 생성
       var checkMsg;
-      if(pw == repw) checkMsg = document.createTextNode("일치합니다");
-      else checkMsg = document.createTextNode("일치하지않습니다.");
+      if(pw == ""){
+        checkMsg = document.createTextNode("비밀번호를 입력하세요");
+        subBox.style.color = 'red';
+      }
+      else if(pw == repw){
+        checkMsg = document.createTextNode("일치합니다");
+        subBox.style.color = 'blue';
+      }
+      else{
+        checkMsg = document.createTextNode("일치하지않습니다.");
+        subBox.style.color = 'red';
+      }
       subBox.appendChild(checkMsg);
       result.appendChild(subBox);
       return result;
+    }
+    function clearbox(){
+      var box = document.getElementById('box');//subBox가 들어간 태그의 id를 불러온다
+      var subBox = document.querySelector('#box span');//printMsg에서 만들어진 span를 선택
+      console.log(subBox);
+      if(subBox != null) box.removeChild(subBox);//subBox에 값이 들어있으면 box안의 subBox를 삭제
     }
     
     /*************상세보기 함수*******************/
