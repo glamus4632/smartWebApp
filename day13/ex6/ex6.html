@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="ex6.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+  
+  <title>Document</title>
+</head>
+<body>
+  
+  <nav>
+    <ul id="nav_menu">
+      <li class="nav_li">menu1</li>
+      <li class="nav_li">menu2</li>
+      <li class="nav_li">menu3</li>
+    </ul>
+    <ul id="ham_btn">
+      <li id="ham_btn_li"><i class="fas fa-bars" class="ham_icon"></i></li>
+    </ul>
+    <ul id="sub_menu">
+      <li class="nav_li">menu1</li>
+      <li class="nav_li">menu2</li>
+      <li class="nav_li">menu3</li>
+    </ul>
+  </nav>
+  <script>
+    $(document).ready(function(){
+      $('#ham_btn').click(function(){
+        $('#sub_menu').toggleClass('ham_box');//토글클래스를 사용할 때는
+        //만들 박스를 html 속성에 부여하면 안된다.
+      });
+      $(window).resize(function(){//윈도우의 길이가 변할 때 마다 호출이 된다
+        console.log('test');
+        console.log($(window).width());
+        if($(window).width() > 640){//윈도우의 크기가 640보다 크면 hambox를 삭제함
+          $('#sub_menu').removeClass('ham_box')
+        }
+      });
+    });
+  </script>
+</body>
+</html>

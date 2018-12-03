@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+  crossorigin="anonymous"></script>
+  <title>jquery_event</title>
+  <style>
+    .outline-red{
+      outline-color:red;
+      background-color: rgb(222, 222, 222);
+    }
+  </style>
+</head>
+<body>
+  
+  <input type="text" id="input1">
+
+
+  <script>
+    $(document).ready(function () {
+           
+      $('#input1').focus(function(){//클릭됐을 때
+        $(this).addClass('outline-red');
+      })
+      $('#input1').blur(function(){//해제되었을 때
+        //$(this).css('background-color','rgb(255,255,255)');
+        $(this).removeClass('outline-red');
+      })
+      
+    });
+  </script>
+</body>
+</html>

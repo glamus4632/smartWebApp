@@ -1,0 +1,43 @@
+<!--중요한 remove, add, css컨트롤 제이쿼리-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+  <title>Document</title>
+  <style>
+    .box{
+      width: 80px;
+      height: 80px;
+      line-height: 80px;
+      text-align: center;
+      font-size: 40px;
+      display: inline-block;
+      border: 1px solid black;
+    }
+    .background-red{/*토글클래스로 제어하기위한 css*/
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <div id="box1" class="box">1</div>
+  <div id="box2" class="box">2</div>
+  <div id="box3" class="box">3</div>
+  <div id="box4" class="box">4</div>
+  <div id="box5" class="box">5</div>
+  <script>
+    $(document).ready(function(){
+      //1. 박스 중 하나를 클릭하면 동작하도록
+      $('div').click(function(){
+        //2. this로 클릭된 객체가 누구인지 특정
+        $(this).toggleClass('background-red');
+        //3. 토글클래스함수로 css제어
+      });
+
+    });  
+  </script>
+</body>
+</html>

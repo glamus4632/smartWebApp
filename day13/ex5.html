@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  테스트
+  <div>
+    과일리스트
+    <ol>
+      <li><span>사과</span></li>
+      <li>배</li>
+      <li>바나나</li>
+    </ol>
+  </div>
+
+  <script>
+    //셀렉터 Traversing
+    $(document).ready(function(){
+      
+      $('li').parents().css('border','solid 1px red');//li위의 모든 태그들
+      $('li').parentsUntil('body').css('border','solid 1px blue');//li 부터 body태그 전까지의 애들
+      $('li').parent().css('border','solid 1px black');//li태그의 바로 위의 부모만
+      $('div').find('li').css('color','skyblue');//div 안에 li를 찾아라
+      //filter는 같은 태그(div, p, span등) 중 class나 id의 이름이 같은 애를 찾는거고
+      //find는 어떤 태그 안에 특정한 자식을 찾아야 할 때 사용한다.
+    });
+  </script>
+</body>
+</html>

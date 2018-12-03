@@ -1,0 +1,48 @@
+*{
+  box-sizing: border-box;
+  margin: 0; padding: 0;
+}
+body{
+  width: 100%;
+}
+.box{
+  margin: 0 auto;
+  width: 450px;
+  height: 320px;
+  background-color: #666;
+  position: relative;
+}
+.sp{
+  display: inline-block;
+  width: 70px;
+  text-align: right;
+  color: white;
+}
+
+.idbox, .pwbox, .repwbox, .ebox{
+  margin: 0 auto;
+  width: 400px;
+  margin-top: 10px;
+}
+.e{
+  display: inline-block;
+  width: 300px;
+}
+.id, .pw, .e{
+  margin-left: 8px;
+  height: 30px;
+  border-radius: 10px;
+}
+.btn{
+  position: relative;
+  top: 20px;
+  left: 50px;;
+}
+.rabtn{
+  
+  display: inline-block;
+  margin-top: 10px;
+}
+.labtn{
+  margin-left: 30px;
+}

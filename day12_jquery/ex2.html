@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+  crossorigin="anonymous"></script>
+  <title>jquery_event</title>
+</head>
+<body>
+  <button id="btn">클릭</button>
+  <input type="text" id="input1">
+
+  <p><b>hello</b></p>
+
+  <button id="hide">Hide</button>
+  <button id="show">Show</button>
+
+  <p id="p1">jQuery is fun!!</p>
+
+  <script>
+    $(document).ready(function () {
+      $('#btn').click(test);
+      
+      function test() {
+        $('p').animate({'color':'red', 'font-size':'40px'},'slow');
+        var text = $('p').text();
+        var html = $('p').html();
+        console.log(text);
+        console.log(html);
+        $('p').text('123');
+
+        //$('p').html('<input type="text">');
+      }
+      //포커스는 눌렀을때만 적용되는거라서 해제되었을 때는 신경쓰지 않아도 된다
+      $('#input1').focus(function(){//클릭됐을 때
+        $(this).css('background-color','yellow');
+      })
+      $('#input1').blur(function(){//해제되었을 때
+        $(this).css('background-color','rgb(255,255,255)');
+      })
+      
+      $('#input1').mouseenter(function(){//마우스가 닿았을 때
+        $(this).css('background-color','rgb(0,255,0)');
+      })
+      $('#input1').mouseleave(function(){//마우스가 떠났을 때
+        $(this).css('background-color','gray');
+      })
+      //hover는 인-아웃을 한 번에 같이 쓸 수 있다. 따로 쓰고 싶다면 마우스엔터, 마우스리브를 쓸 것
+      /*$("#input1").hover(function(){
+      alert("You entered input1");
+      },
+      function(){
+          alert("Bye! You now leave input1!");
+      });
+      $("#hide").click(function(){
+        $("p").hide();
+      });
+      $("#show").click(function(){
+        $("p").show();
+      });*/
+      $("button").click(function(){
+        $("#p1").css("color", "red").slideUp(2000).slideDown(2000);
+    });
+    });
+  </script>
+</body>
+</html>

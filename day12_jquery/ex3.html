@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <a href="http://naver.com" target="_blank">네이버</a>
+  <button id="btn1">버튼</button>
+
+
+  <script>
+    $(document).ready(function(){
+      $('#btn1').click(function(){
+        /*
+        var a = $('a');
+        console.log(a.attr('href'));
+        a.attr('href','http://daum.net');
+        a.text('다음');
+        */
+        var a = $('a');
+        var text = a.text();
+        
+        if(text == '네이버'){
+          a.attr('href','http://daum.net');
+          a.text('다음');
+          //return; 만약 text를 a.text()로 다이렉트로 불렀다면 코드의 순서상 밑의 코드도 같이 실행이 되어버린다
+          //때문에 if문을 연달아 쓸거라면(밑의 if문과 연동이 된다면) retunr으로 함수를 빠져나가야한다.
+        }
+        if(text == '다음'){
+          a.attr('href','http://naver.com');
+          a.text('네이버');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

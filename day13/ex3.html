@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <!--필터는 first, last, eq, filter, not이 있다.
+    first는 처음꺼
+    last는 마지막꺼
+    eq(2)는 ()안의 번째꺼 0부터 시작
+    filter는 ()안의 클래스를 모두 선택
+    not()은 ()안의 애 빼고
+  -->
+  <p class="text">안녕하세요. 제 이름은 <span>주완준</span>입니다.</p>
+  <p>안녕하세요. 제 이름은 <span>끄앙</span>입니다.</p>
+  <script>
+    $(document).ready(function(){
+      var obj = $('p').filter('.text').text();//p태그 중에서 .text인 애들 선택
+      var obj2 = $('p.text').text();
+      var obj3 = $('p').not('.text').text();//p태그 중에서 .text가 아닌 애들 선택
+      console.log(obj);
+      console.log(obj2);
+      console.log(obj3);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!--중요한 remove, add, css컨트롤 제이쿼리-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+  <title>Document</title>
+  <style>
+    .redbox{
+      background-color: red;
+      color: white;
+      height: 100px;
+    }
+    .greenbox{
+      background-color: green;
+      color: orange;
+      height: 100px;
+    }
+    .display-none{
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="redbox">123</div>
+  <div class="greenbox">456</div>
+  <div id="valid">유효성검사</div><!--처음에 감추고 싶다면 .display-none를 넣으면 된다-->
+  <button class="btn1">클래스 제거</button>
+  <button class="btn2">클래스 추가</button>
+  <button class="btn3">유효성</button>
+  <script>
+    $(document).ready(function(){
+      $('.btn1').click(function(){
+        $('.redbox').removeClass('redbox');
+      });
+      $('.btn2').click(function(){
+        $('div').addClass('redbox');
+      });
+      $('.btn3').click(function(){
+        $('#valid').toggleClass('display-none');//toggleClass는 있으면 추가하고 없으면 생성해라
+        //$('.display-none').toggleClass('display-none');
+        //이런식으로 하면 처음에는 동작하지만 이후에는 동작하지 않는다 왜냐하면 처음에는 display-none클래스(와css)가 있어서
+        //동작하지만 toggle클래스에 의해 제거된 이후에는 display-none클래스를 가진 객체가 없기 때문이다
+        //따라서 껏다 켯다 하고 싶으면 건드리지 않는 객체하나를 셀렉터로 두고 css를 가진 객체를 조절하는게 좋다
+        //css용 클래스와 쿼리 셀렉터용 클래스를 만들던지 id를 가지고 오던지 하면된다
+      });
+    });  
+  </script>
+</body>
+</html>

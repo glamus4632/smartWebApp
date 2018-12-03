@@ -1,0 +1,47 @@
+<!--중요한 remove, add, css컨트롤 제이쿼리-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+  <title>Document</title>
+  <style>
+    div{
+      width: 80px;
+      height: 80px;
+      line-height: 80px;
+      text-align: center;
+      font-size: 40px;
+      display: inline-block;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div class="test">5</div>
+  <script>
+    $(document).ready(function(){
+      //first = 객체들 중 첫번 째 객체
+      $('div').first().css('border-color','red');//체이닝기법
+      //first = 객체들 중 마지막 객체
+      $('div').last().css('border-color','blue');
+      //eq(num) = 선택된 객체 중 num+1번째 객체
+      $('div').eq(1).css('font-weight','700');//2가 굵어짐
+      
+      //filter = div 중 class이름이 test인 객체
+      $('div').filter('.test').css('color','red');
+      //$('div.test').css('color','red'); 이것과 동일하다
+      //not = div 중에서 class가 test가 아닌 객체
+      $('div').not('.test').css({'background-color':'yellow','opacity':'0.05'});//오퍼시티는 0~1까지만
+
+      
+    });  
+  </script>
+</body>
+</html>

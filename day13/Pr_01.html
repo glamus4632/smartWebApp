@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+  <title>Document</title>
+ 
+</head>
+<body>
+  <!--1. 인풋창에서 입력받은 값을 버튼을 누르면 받아와서 출력시켜라--> 
+  <input type="text" id="input" class="text">
+  <button id="btn" class="btn1">버튼</button>
+  <button class="btn2">토글버튼</button>
+  <!--2. 입력창에 입력된 값이변경되면 콘솔에 해당 입력값이 출력되도록 작성
+  change를 쓰면 된다-->
+ 
+  <h1 id="h1" class="\h1none">HELLO!</h1>
+  <script>
+    $(document).ready(function () {
+      /*   1번문제
+      $('.btn1').click(text);
+
+      function text(){
+        var a = $('.text').val();
+        console.log(a);
+      }*/
+      //2번문제
+      $('.test').click(function(){
+        alert(getValue('.text'));
+      });
+      $('.text').change(function(){
+        alert(getValue(this));
+      });
+      function getValue(textObj){
+        return $(textObj).val();
+      }
+    
+      
+      
+      
+
+      
+
+    });
+
+  </script>
+  
+</body>
+</html>
