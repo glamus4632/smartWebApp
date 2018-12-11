@@ -827,7 +827,32 @@ ul.api_list>li>a{
 .border-center2{
   top: 132px;
 }
-
+.li_box{
+  position: relative;
+  top: 5px;
+  left: 18px;
+  font-size: 0;
+  display: none;
+}
+.li_box>a{
+  padding: 7px 3px;
+  border: 1px solid #bec8d8;
+  background-color: white;
+  color: black;
+}
+.li_box>.goodock{
+  border-right: 0;
+}
+.li_box>a:hover{
+  text-decoration: none;
+  border: 1px solid #888;
+}
+.api_list_item:hover{
+  background-color: #f9fafc;
+}
+/* .display_index{
+  z-index: 0;
+} */
 /******right nav start***********************************************************************/
 .box4{
   height: 120px;
@@ -885,8 +910,9 @@ ul.api_list>li>a{
   border-bottom: 1px solid #ebeef3;
   position: relative;
 }
-.box5-bootom{
+.box5-bottom{
   height: 106;
+  display: none;
 }
 .box5-item1{
   display: inline-block;
@@ -993,4 +1019,8 @@ ul.api_list>li>a{
 /***********display-block****************************/
 .display_block{
   display: block;
+}
+.api_list>li>a.display_none,
+.display_none{
+  display: none;
 }

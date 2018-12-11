@@ -33,6 +33,53 @@ $(document).ready(function(){
   }
   hoverlist('.roll-area', '.real_up_list');
   
+  $('.api_list_item').hover(function(){
+    // $('.api_list>li>a').toggleClass('display_none');
+    // $('.li_box').toggleClass('display_block');
+    //li태그의 자식인 a태그는 감추고 div는 블럭으로 보여라
+    $(this).children('a').toggleClass('display_none');
+    $(this).children('.li_box').toggleClass('display_block');
+  },function(){
+    // $('.api_list>li>a').toggleClass('display_none');
+    $(this).children('a').toggleClass('display_none');
+    $(this).children('.li_box').toggleClass('display_block');
+  });
+
+
+  var index = 1;
+  //바꿀 이름들 배열로 저장
+  var obj = new Array(
+    '청주시 용암동',
+    '두번째',
+    '세번째',
+    'gkgkgk'
+  );
+ //디스플레이 구동 부
+  function displayBox5(i){
+    $('.box5-bottom').removeClass('display_block');
+    $('.box5-bottom').eq(i-1).addClass('display_block');//eq는 인덱스의 몇번째인지 알아내는 함수
+    $('.color-black').text(i);
+    $('.location').text(obj[i-1]);
+    $('.box5-item2>span').text('/'+obj.length);
+  }
+  displayBox5(index);
+  //액션부
+  $('.box5-item3-prev').click(function(){
+    index--;
+    if(index == 0) index = obj.length;
+    displayBox5(index);
+    //console.log(index);
+  });
+  $('.box5-item3-next').click(function(){
+    index ++;
+    if(index >= obj.length+1) index = 1;
+    displayBox5(index);
+    //console.log(index);
+  });
+  
+  
+  
+
 /*************인기검색어, 뉴스스탠드 자동 스크롤*********************************************** */  
   /*///이거는 마지막이 되면 1번으로 주르륵 올라가서 보기 안좋다
   $(function() {

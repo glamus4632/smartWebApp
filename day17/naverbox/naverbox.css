@@ -397,6 +397,22 @@ fieldset{
   height: 16px;
   background-position: -279px -78px;
 }
+.service_nav_Mymenu{
+  position: relative;
+  padding-left: 14px;
+  display: none;
+  top: 6px;
+  background-color: #fff;
+}
+.chan_Mymenu{
+  float: left;
+  margin-left: 10px;
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  height: 35px;
+  border: 1px solid #888;
+}
 /********초록색 nav end*******************************************************/
 .bar{
   display: inline-block;
@@ -411,7 +427,7 @@ fieldset{
   margin-top: 16px;
 }
 .more{
-  display: block;
+  display: inline-block;
   width: 55px;
   height: 16px;
   background-position: 0 -104px;
@@ -455,7 +471,7 @@ fieldset{
   top: -1px;
   right: 0px;
   background-color: #fff;
-  width: 300px;
+  width: 288px;
   height: 320px;
   border: 1px solid #bec8d8;
   z-index: 2;
@@ -463,6 +479,41 @@ fieldset{
 }
 .real_up_list:hover{
   display: block;
+}
+.real_top{
+  height: 46px;
+  padding: 26px 26px 0;
+}
+.real_rank{
+  height: 30px;
+  padding: 0 9px 6px 17px;
+}
+.rank{
+  display: block;
+  float: left;
+  border: 1px solid #e3e7ee;
+  width: 129px;
+  height: 24px;
+  font-size: 12px;
+  line-height: 14px;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+}
+.rank:hover{
+  text-decoration: none;
+}
+.rank_left{
+  border-right: 0;
+  padding-top: 5px;
+}
+.rank_right{
+  padding-top: 5px;
+  background-color: #f9fafc;
+}
+.real_rank_item{
+  height: 22px;
+  padding: 4px 0 0 21px;
 }
 .icon_open{
   width: 11px;
@@ -536,7 +587,7 @@ a.serv_all:hover, a.serv_menu:hover{
   text-decoration: none;
   border-color: lightslategrey;
 }
-.serv_exit_icon{
+.serv_exit_icon,.serv_menu_exit_icon{
   position: relative;
   margin: 0 0 0 16px;
   top: 6px;
@@ -546,9 +597,30 @@ a.serv_all:hover, a.serv_menu:hover{
   background-image: url(https://s.pstatic.net/static/www/img/2018/sp_themecast_v180607.png);
   background-position: -191px -257px;
 }
-.serv_exit_icon:hover{
+.serv_exit_icon:hover,.serv_menu_exit_icon:hover{
   background-image: url(https://s.pstatic.net/static/www/img/2018/sp_themecast_v180607.png);
   background-position: -164px -257px;
+}
+.service_area_munu{
+  position: absolute;
+  height: 46px;
+  padding-top: 9px;
+  top: -47px;
+  right: 0;
+  background-color: #fff;
+  display: none;
+}
+.serv_menu_ok,.serv_menu_cancle{
+  float: left;
+  margin-left: 5px;
+  width: 45px;
+  height: 29px;
+  border: 1px solid #e3e7ee;
+  background: #fff;
+  color: #444;
+  text-align: center;
+  font-size: 12px;
+  line-height: 29px; 
 }
 .op_sevr{/*더보기 시 뒷배경 어둡게*/
   display: none;
@@ -571,14 +643,12 @@ a.serv_all:hover, a.serv_menu:hover{
   padding-left: 16px;
   display: inline-block;
 }
+.serv_box_inner .serv_box_item2{
+  padding-left: 16px;
+  display: inline-block;
+}
 .serv_box_item{
   border-left: 1px solid #f1f3f6;
-}
-.serv_item_text{
-  padding-top:7px;
-  display: block;
-  font-weight: 700;
-  font-size: 12px;
 }
 .serv_box_item>ul{
   padding-top:5px;
@@ -587,6 +657,16 @@ a.serv_all:hover, a.serv_menu:hover{
   padding-top: 10px;
   font-size: 12px;
   line-height: 16px;
+  cursor: pointer;
+}
+.serv_item_text, .serv_item_text2{
+  padding-top:7px;
+  display: block;
+  font-weight: 700;
+  font-size: 12px;
+}
+.item_check{
+  
 }
 /**********서비스 박스 end*************************************/
 /******container*****************************************************************************/
@@ -827,7 +907,32 @@ ul.api_list>li>a{
 .border-center2{
   top: 132px;
 }
-
+.li_box{
+  position: relative;
+  top: 5px;
+  left: 18px;
+  font-size: 0;
+  display: none;
+}
+.li_box>a{
+  padding: 7px 3px;
+  border: 1px solid #bec8d8;
+  background-color: white;
+  color: black;
+}
+.li_box>.goodock{
+  border-right: 0;
+}
+.li_box>a:hover{
+  text-decoration: none;
+  border: 1px solid #888;
+}
+.api_list_item:hover{
+  background-color: #f9fafc;
+}
+/* .display_index{
+  z-index: 0;
+} */
 /******right nav start***********************************************************************/
 .box4{
   height: 120px;
@@ -885,8 +990,9 @@ ul.api_list>li>a{
   border-bottom: 1px solid #ebeef3;
   position: relative;
 }
-.box5-bootom{
+.box5-bottom{
   height: 106;
+  display: none;
 }
 .box5-item1{
   display: inline-block;
@@ -993,4 +1099,11 @@ ul.api_list>li>a{
 /***********display-block****************************/
 .display_block{
   display: block;
+}
+.api_list>li>a.display_none,
+.display_none{
+  display: none;
+}
+.display_inline_block{
+  display: inline-block;
 }
