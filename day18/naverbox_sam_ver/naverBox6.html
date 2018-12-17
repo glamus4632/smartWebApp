@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link rel="stylesheet" href="naverBox6.css">
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>    
+    <script src="naverBox6.js"></script>
+    <script src="subMenu.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <div class="nav-top">
+                <div class="nav-top-inner">
+                  <!-- 즐겨찾기, 주니어네이버, 해피빈 -->
+                    <div class="nav-links">
+                        <a href="" class="favorite">네이버를 시작페이지로</a>
+                        <a href="" class="jrnaver">
+                            <div class="jrnaver-inner"></div>
+                        </a>
+                        <a href="" class="happy">
+                            <div class="happy-inner"></div>
+                        </a>
+                    </div>
+                    <!-- 네이버로고 -->
+                    <h1 class="logo-box">
+                        <a href="#" class="logo-link">
+                            <span class="logo-img"></span>
+                        </a>
+                    </h1>
+                    <!-- 네이버로고 -->
+                    <!-- 검색창 -->
+                    <div class="search-box">
+                        <form action="#">
+                            <!-- 검색 입력 박스 -->
+                            <div class="input-box">
+                                <input type="text" name="search">
+                            </div>
+                            <!-- 검색 입력 박스 -->
+                            <!-- 검색 버튼 -->
+                            <button class="search-btn">
+                                <span class="btn-img"></span>
+                            </button>
+                            <!-- 검색 버튼 -->
+                            <!-- 자동완성기능 -->
+                            <div class="auto-search">
+                                <div class="auto-down"></div>
+                            </div>
+                            <!-- 자동완성박스 -->
+                            <div id="auto-box"></div>
+                            <!-- 자동완성기능 -->
+                            <!-- 가상키보드 -->
+                            <div class="keyboard">
+                                <div class="keyboard-img"></div>
+                            </div>
+                            <!-- 가상키보드 -->
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-bottom">
+                <div class="nav-bottom-inner">
+                    <div class="nav-inner">
+                        <div class="inline-block item1">
+                            <a href="#"><div class="item1-1"></div></a>
+                            <a href="#"><div class="item1-2"></div></a>
+                            <a href="#"><div class="item1-3"></div></a>
+                            <a href="#"><div class="item1-4"></div></a>
+                            <a href="#"><div class="item1-5"></div></a>
+                            <a href="#"><div class="item1-6"></div></a>
+                            <a href="#"><div class="item1-7"></div></a>
+                        </div>
+                        <div class="inline-block item2">
+                                <a href="#"><div class="item2-1 back-img dici"></div></a>
+                                <a href="#"><div class="item2-1 back-img newsi"></div></a>
+                                <a href="#"><div class="item2-1 back-img stocki"></div></a>
+                                <a href="#"><div class="item2-1 back-img dealeri"></div></a>
+                                <a href="#"><div class="item2-1 back-img mapi"></div></a>
+                                <a href="#"><div class="item2-1 back-img moviei"></div></a>
+                                <a href="#"><div class="item2-1 back-img musici"></div></a>
+                                <a href="#"><div class="item2-1 back-img booki"></div></a>
+                                <a href="#"><div class="item2-1 back-img webtooni"></div></a>
+                        </div>
+                        <div class="inline-block item3"></div>
+                        <div class="inline-block item4"></div>
+                        <div class="inline-block item5">
+                            <ul>
+                                <li>
+                                    <span class="real-num">1</span> 
+                                    <span class="real-search">그린컴퓨터학원</span>
+                                </li>
+                                <li>
+                                    <span class="real-num">2</span> 
+                                    <span class="real-search">그린</span>
+                                </li>
+                                <li>
+                                    <span class="real-num">3</span> 
+                                    <span class="real-search">컴퓨터</span>
+                                </li>
+                                <li>
+                                    <span class="real-num">4</span> 
+                                    <span class="real-search">학원</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="real-search-box">
+                            <div class="real-top">급상승 검색어</div>
+                            <div class="real-rank">
+                                <a href="#" class="rank rank-left">1~10</a>
+                                <a href="#" class="rank rank-right">11~10</a>
+                            </div>
+                            <ul class="rank-lists">
+                                <li class="rank-list">1. 그린컴퓨터아트학원</li>
+                                <li class="rank-list">2. 그린</li>
+                            </ul>
+                            <ul class="rank-lists">
+                                <li class="rank-list">11. 삼성</li>
+                                <li class="rank-list">12. 엘지</li>
+                            </ul>
+                        </div>
+                        <div class="inline-block item6"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!----------- bottom ------------------------------------------------------->        
+        <div class="bottom">
+            <div class="sub-menu-background"></div>
+            <div class="sub-menu">
+                <div class="sub-menu-inner">
+                    <div class="sub-menu-icons">
+                        <a href="#" class="menu-close">
+                          <span></span>
+                        </a>
+                        <a href="#" class="sub-menu-a menu-setting">메뉴 설정</a>
+                        <a href="#" class="sub-menu-a all-service">서비스 전체보기</a>
+                        <a href="#" class="sub-menu-a cancle display-none">취소</a>
+                        <a href="#" class="sub-menu-a ok display-none">확인</a>
+                        <a href="#" class="sub-menu-a init display-none">초기화</a>
+                    </div>
+                    <div class="sub_menu_div"> <!-- ㄱ-ㄴ -->
+                      <div>
+                        <input type="checkbox" name="" id="dic" value="dici" class="display-none">
+                        <label for="dic">사전</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" name="" id="news" value="newsi" class="display-none">
+                        <label for="news">뉴스</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" name="" id="stock" value="stocki" class="display-none">
+                        <label for="stock">증권</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" name="" id="dealer" value="dealeri" class="display-none">
+                        <label for="dealer">부동산</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" name="" id="map" value="mapi" class="display-none">
+                        <label for="map">지도</label>
+                      </div>
+                      <div>
+                        <input type="checkbox" name="" id="movie" value="moviei" class="display-none">
+                        <label for="movie">영화</label>
+                      </div>
+                    </div>
+                    <div class="sub_menu_div"> <!-- ㄷ-ㄹ -->
+                      
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-inner">
+                <div class="bottom-wrap">
+                    <div class="bottom-left">
+                        <div class="box1">
+                            <a href="https://nv.veta.naver.com/fxclick?eu=EU10000120&calp=-&ac=7743339&src=3606117&br=2779599&evtcd=P901&x_ti=837&tb=&oid=&sid1=&sid2=&rk=e5cfbf1bcdf8b2f2757803773afc6ee2&eltts=AExMFAjTUT2%2FAbAa1O9bhQ%3D%3D&lu=&brs=Y&" target="_blank"><img src="https://ssl.pstatic.net/tveta/libs/1210/1210607/72b814bd75320bace031_20181025110955978.jpg" width=738px height=118px alt=""></a>
+                        </div>
+                        <div class="box2">
+                            <div class="box2-inner">
+                                <h3 class="news">
+                                    <a href="#">
+                                        연합뉴스
+                                        <i class="icon-next"></i>
+                                    </a>
+                                </h3>
+                                <div class="news-content">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                靑 "경제투톱 2기로 가는 분위기"…교체 움직임에 하마평 무성
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                뉴스입니다~~
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                그린컴퓨터학원 뉴스입니다
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <ul class="box2-inner2">
+                                <li class="ul-item">
+                                    <a href="#" class="green">네이버뉴스</a>
+                                </li>
+                                <li class="ul-item">
+                                    <a href="#">연예</a>
+                                </li>
+                                <li class="ul-item">
+                                    <a href="#">스포츠</a>
+                                </li>
+                                <li class="ul-item">
+                                    <a href="#">경제</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="box3">
+                            <div class="box3-inner1">
+                                <div class="box3-item1">
+                                    <a href="#">뉴스스탠드</a>
+                                    <i class="icon-next"></i>
+                                </div>
+                                <div class="box3-item2">
+                                    <div class="all">전체언론사</div>
+                                    <div class="inline-block item3"></div>
+                                    <div class="my">My뉴스</div>
+                                </div>
+                                <div class="box3-item3">
+                                    <div class="box3-menu">
+                                        <a href="#" class="box3-menus">
+                                            <i class="box3-icons menu"></i>
+                                        </a>
+                                        <a href="#" class="box3-menus">
+                                            <i class="box3-icons list"></i>
+                                        </a>
+                                        <a href="#" class="box3-menus">
+                                            <i class="box3-icons setting"></i>
+                                        </a>
+                                    </div>
+                                    <div class="box3-dir">
+                                        <a href="#" class="box3-prev">
+                                            <i class="btn-prev"></i>
+                                        </a>
+                                        <a href="#" class="box3-next">
+                                            <i class="btn-next"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box3-inner2">
+                                <ul class="api-list">
+                                    <li>
+                                        <a href="#">
+                                            <img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd145718601.png" alt="">
+                                        </a>
+                                        <div>
+                                            123
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd145718601.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd145718601.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd145718601.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd145718601.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd145718601.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd145718601.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd145718601.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd145718601.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd145718601.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd145718601.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd145718601.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd145718601.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd145718601.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd145718601.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd145718601.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd145718601.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd145718601.png" alt="">
+                                        </a>
+                                    </li>
+                                </ul>
+                                <i class="border-right"></i>
+                                <i class="border-center1"></i>
+                                <i class="border-center2"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-right">
+                      <div class="box4">
+                          <div class="box4-inner">
+                            <p>네이버를 더 안전하고 편리하게 이용하세요.</p>
+                            <a href="#" class="login-btn"></a>
+                            <div class="lg-links">
+                                <a href="#">아이디</a>
+                                <span>·</span>
+                                <a href="#">비밀번호 찾기</a>
+                                <a href="#" class="float-right">회원가입</a>
+                            </div>
+                          </div>
+                      </div>
+                      <div class="box5">
+                        <div class="box5-top">
+                            <div class="box5-item1">
+                                <a href="#" class="day">10.31.(수)</a>
+                                <i class="fab fa-500px"></i> 
+                                <a href="#" class="location">
+                                    청주시 용암동
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                                <a href="#" class="location">
+                                    스포츠
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                                <a href="#" class="location">
+                                    날씨
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                                <a href="#" class="location">
+                                    광고
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                                <a href="#" class="location">
+                                    웹툰
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                                <a href="#" class="location">
+                                    뉴스
+                                    <i class="fas fa-angle-right"></i>
+                                </a>
+                            </div>
+                            <div class="box5-item2">
+                                <b class="color-black">5</b>/6
+                            </div>
+                            <div class="box5-item3">
+                                <a href="#" class="box5-prev">
+                                    <i class="btn-prev"></i>
+                                </a>
+                                <a href="#" class="box5-next">
+                                    <i class="btn-next"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="box5-bottom">1</div>
+                        <div class="box5-bottom">2</div>
+                        <div class="box5-bottom">3</div>
+                        <div class="box5-bottom">4</div>
+                        <div class="box5-bottom">5</div>
+                        <div class="box5-bottom">6</div>
+                      </div>
+                      <div class="box6">
+                          <a href="https://nv.veta.naver.com/fxclick?eu=EU10000119&calp=-&ac=7743880&src=3606022&br=2779556&evtcd=P901&x_ti=838&tb=&oid=&sid1=&sid2=&rk=b49cba7c343667539b3f205bdec04795&eltts=n7E1XMktwsUWuMtw%2BjOvZg%3D%3D&lu=&brs=Y&" target="blank"><img src="https://ssl.pstatic.net/tveta/libs/1216/1216257/0125aa3baf871471a8d4_20181024191227594.jpg" width=330px height=148px alt=""></a>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -61,8 +61,8 @@ $(document).ready(function(){
     $('.color-black').text(i);
     /**
      * 박스를 html에 생성했을 경우(a태그든 div든 호환 가능)
-     * $('.location').removeClass('display_block');
-     * $('.location').eq(i-1).addClass('display_block');
+     * $('.location').removeClass('display_inline_block');
+     * $('.location').eq(i-1).addClass('display_inline_block');
      */
     $('.location').text(obj[i-1]);
     $('.box5-item2>span').text('/'+obj.length);
@@ -146,9 +146,8 @@ $(document).ready(function(){
     $('.service_area').addClass('display_none');
     $('.service_area_munu').toggleClass('display_block');
 
-    $('.serv_box_item').css('display','none');
 
-
+    
     $('.serv_box_item>ul>li').click(function(){
       var arr = [];
       var check = $(this);//this = '.serv_box_item>ul>li'
@@ -156,7 +155,7 @@ $(document).ready(function(){
       console.log('123');
       $('.chan_Mymenu').each(function(){
         text = $(this).text();
-        console.log(text);
+        //console.log(text);
         $(this).text('');
         if(text != ''){
           arr.push(text);
@@ -176,24 +175,20 @@ $(document).ready(function(){
       for(var i=0; i<arr.length; i++){
         $('.chan_Mymenu').eq(i).text(arr[i]);
       }
-      
-      
     });
-    var exit = $('.serv_menu_exit_icon');
-    $(exit).click(function(){
-      $('.service_area').removeClass('display_none');
-      $('.service_area_munu').toggleClass('display_block');
-      $('.service_nav_Mymenu').toggleClass('display_inline_block');
-      $('#service_nav').toggleClass('display_none');
-      menu();
-    });
-    
   });
   
-  var cancle = $('.serv_menu_cancle');
   //x버튼 눌렀을 때
-  
+  var exit = $('.serv_menu_exit_icon');
+  $(exit).click(function(){
+    $('.service_area').removeClass('display_none');
+    $('.service_area_munu').toggleClass('display_block');
+    $('.service_nav_Mymenu').toggleClass('display_inline_block');
+    $('#service_nav').toggleClass('display_none');
+    menu();
+  });
   //취소 눌렀을 때
+  var cancle = $('.serv_menu_cancle');
   $(cancle).click(function(){
     $('.service_area').removeClass('display_none');
     $('.service_area_munu').toggleClass('display_block');

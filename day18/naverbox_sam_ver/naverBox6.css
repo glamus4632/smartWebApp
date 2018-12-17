@@ -1,0 +1,1163 @@
+@charset 'utf-8';
+
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-size:14px;
+    margin : 0;
+    padding : 0;
+    font-family: Dotum,'돋움',Helvetica,"Apple SD Gothic Neo",sans-serif;
+}
+
+ul,ol{
+    list-style: none;
+}
+
+/*
+div{
+    border: solid 1px black;
+}
+*/
+
+.container{
+    min-width: 1100px;  /*어떤 브라우저던 width값을 1100px 로 잡겠다. 화면을 줄이던 키우던 width값이 1100px로 유지됨 */
+}
+
+
+
+.nav-top{
+    /*height: 170px;*/
+}
+
+.nav-bottom{
+    /*height:47px;*/
+    border: 1px solid rgb(241,243,246);
+    border-bottom: 1px solid rgb(208,216,228);
+
+    /* 
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    */
+}
+
+.nav-top-inner{
+    margin:0 auto;
+    height:170px;
+    width:1080px;
+    border-color: red;
+    position: relative;
+
+}
+
+
+.nav-bottom-inner{
+    margin:0 auto;
+    height:47px;
+    width: 1080px;
+    border-color:blue;
+    position: relative;
+}
+
+
+.bottom{
+    background-color: rgb(242,244,247);
+    position: relative;
+}
+
+
+.bottom-inner{
+    width:1100px;
+    margin: 0 auto;
+    padding:8px 10px 0; /*순서 : 상 우 하 좌 */
+    /* padding:8px 10px 0 10px; */
+}
+.bottom-wrap{
+    font-size:0;
+}
+
+/* bottom-left클래스와 bottom-right 클래스에 같이 적용될 css*/
+.bottom-left,
+.bottom-right{
+    display: inline-block;
+}
+.bottom-left{
+    width: 740px;
+}
+.bottom-right{
+    width:332px;
+    float: right;
+
+}
+
+
+.bottom-left>div,
+.bottom-right>div{
+    margin-bottom: 8px;
+    border:solid 1px rgb(222,227,235);
+}
+
+.bottom-left>div.box1{
+    height:120px;
+    border-color : rgb(200,209,210);    
+    /* 위의 .bottom-left>div 가 상속때문에 더 강해서 보더색깔이 다른색으로 지정됨. 
+    그래서 이 선택자를 더 강하게 하기 위해(우선순위를 높이기 위해) .box1앞에 .bottom-left>div.를 더 붙임으로서 강하게 해줌*/
+}
+.box2{
+    height:46px;
+    background-color: white;
+    position: relative;
+}
+.box3{
+    height:246px;
+    background-color: white;
+}
+
+.box4{
+    height:120px;
+    background-color: white;
+    position: relative;
+}
+
+.box4-inner{
+    height: 93px;
+    padding: 15px 25px;
+}
+
+.box4-inner>p{
+    color: #888;
+    font-size: 12px;
+    /* 글자를 입력하면 글자 크기(font-size)와 고정된 길이를 포함한 높이가 지정되는데 이 높이가 line-height이다. 보통 line-height는 글자 크기를 증가해도
+    높이가 늘어나는 것을 막고자 할 때 사용한다. 그래서 line-height:14px;을 입력하면 글자크기를 포함한 높이가 14px이 되게 한다. */
+    line-height: 14px;
+}
+
+.login-btn{
+    display: block;
+    height: 37px;
+    margin-top: 12px;
+    background-image: url('https://s.pstatic.net/static/www/img/2018/sp_login_v180727.png');
+    background-position: 0 -47px;
+}
+
+.lg-links{
+    height: 38px;
+    width:280px;
+    position: absolute;
+    left:25px;
+    bottom:0;
+    font-size:0;
+}
+
+.lg-links>*{
+    font-size: 12px;
+}
+
+.lg-links>a{
+    line-height: 38px;
+    font-size: 12px;
+    color: #666;
+    text-decoration: none;
+}
+
+.lg-links>a:hover{
+    text-decoration: underline;
+}
+
+/* 나
+
+.box4-text{
+    width: 330px;
+    height: 93px;
+    padding : 15px 25px;
+    color:#888;
+    font-size: 12px;
+}
+
+.box4-text>p{
+    height: 26px;
+}
+
+.box4-login{
+    height : 37px;
+    background-color: rgb(62,199,41);
+    text-align: center;
+    font-weight: 70;
+    font-size : 15px;
+    color: white;
+    padding-top: 8px;
+    
+}
+*/
+
+
+.box5{
+    height:142px;
+}
+
+.box6{
+    height:150px;
+}
+
+.float-right{
+    float : right;
+}
+
+
+
+/*나
+.area-links{
+    position: absolute;
+    top : 11px;
+    right: -5px;
+}
+
+.area-links>a:nth-child(1){
+    float: left;
+    height: 21px;
+    color: #888;
+    letter-spacing: -1px;
+    font-size: 11px;
+    line-height: 22px;
+    text-decoration: none;
+}
+
+.area-links-icon{
+    display: inline-block;
+    margin-left: 5px;
+    width: 6px;
+    height: 7px;
+    background-image: url("https://s.pstatic.net/static/www/img/2018/sp_main_v181019.png");
+    background-position: -158px -94px;
+}
+*/
+
+
+.nav-links{
+    position: absolute;
+    right : -5px;
+    top : 11px;
+}
+
+.nav-links>a{
+    text-decoration: none;
+}
+
+.favorite{
+    line-height: 22px;
+    font-size: 11px;
+    color: #888;
+    float: left;
+}
+
+.favorite:hover{
+    text-decoration: underline;
+}
+
+.jrnaver,
+.happy{
+    padding: 5px;
+    float: left;
+}
+
+.jrnaver-inner{
+    background-image: url('https://s.pstatic.net/static/www/img/2018/sp_main_v181019.png');
+    background-position: 0 -120px;
+    height: 11px;
+    width:58px;  /*부모 태그의 가로의 길이가 미지정이기 때문에*/
+}
+
+.jrnaver-inner:hover{
+    background-image: url('https://s.pstatic.net/static/www/img/2018/sp_main_v181019.png');
+    background-position: -68px -120px;
+    height: 11px;
+    width:58px;  /*부모 태그의 가로의 길이가 미지정이기 때문에*/
+}
+
+
+.happy-inner{
+    background-image: url('https://s.pstatic.net/static/www/img/2018/sp_main_v181019.png');
+    background-position: -143px -52px;
+    height: 11px;
+    width: 34px;
+}
+
+.happy-inner:hover{
+    width: 34px;
+    height: 11px;
+    background-position: -143px -73px;
+}
+
+
+.nav-inner{
+    height: 32px;
+    font-size : 0;
+    position: relative;
+}
+
+.inline-block{
+    display: inline-block;
+}
+
+.item1{
+    width: 303px;
+    height: 32px;
+    padding: 16px 0 0 4px;
+    font-size: 0;
+}
+
+/* item1-1~ item1-7 속성을 inline-block으로 바꾸고 높이를 16px로 설정*/
+.item1>a>div{
+    display: inline-block;
+    height: 16px;
+    background-image: url('https://s.pstatic.net/static/www/img/2018/sp_nav_v181019.png');
+}
+
+.item1-1{
+    width: 25px;
+    background-position: -244px -233px;
+}
+
+.item1-2{
+    width: 27px;
+    background-position: -279px -130px;
+    margin-left: 14px;
+}
+
+.item1-3{
+    width: 40px;
+    background-position: -150px -182px;
+    margin-left: 14px;
+}
+
+.item1-4{
+    width: 40px;
+    background-position: -102px -156px;
+    margin-left: 14px;
+}
+
+.item1-5{
+    width: 26px;
+    background-position: -128px -104px;
+    margin-left: 14px;
+}
+
+.item1-6{
+    width: 25px;
+    background-position: -107px -285px;
+    margin-left: 14px;
+}
+
+.item1-7{
+    width: 32px;
+    background-position: -125px -130px;
+    margin-left: 14px;
+    margin-top: -1px;
+}
+
+
+
+.item2{
+    height: 32px;
+    padding: 16px 0 0 14px;
+    font-size:0;
+}
+/*메뉴설정버튼 클릭하면 보이는 박스*/
+.item2-1{
+    width: 64px;
+    height: 30px;
+    margin-left: 14px;
+    display: block;
+    margin-top: -9px;
+    border: #000 1px solid;
+    float: left;
+}
+
+.back-img{
+    border: none;
+    margin-top: 0;
+    display: inline-block;
+    height: 16px;
+    background-image: url('https://s.pstatic.net/static/www/img/2018/sp_nav_v181019.png');
+}
+
+.dici{
+    width: 26px;
+    background-position: 0px -259px;
+}
+
+.newsi{
+    width: 28px;
+    background-position: -279px -26px;
+}
+
+.stocki{
+    width: 26px;
+    background-position: -108px -259px;
+}
+
+.dealeri{
+    width: 40px;
+    background-position: -152px -156px; 
+}
+
+.mapi{
+    width: 27px;
+    background-position: -279px -208px;
+}
+
+.moviei{
+    width: 27px;
+    background-position: -279px -52px;
+}
+
+.musici{
+    width: 26px;
+    background-position: -144px -259px;
+}
+
+.booki{
+    width: 13px;
+    background-position: -140px -78px;
+}
+
+.webtooni{
+    width: 27px;
+    background-position: -279px -78px;
+}
+
+
+
+.item3{
+    width: 1px;
+    height: 14px;
+    background-color: #ebeef3;
+    margin: 18px 16px 0;
+}
+
+.item4{
+    width: 55px;
+    height: 16px;
+    background-position: 0 -104px;
+    background-image: url('https://s.pstatic.net/static/www/img/2018/sp_nav_v181019.png');
+    cursor: pointer;
+}
+.item4-1{
+    background-position: 0 -208px;
+}
+
+.item5{
+    width: 198px;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    top: calc((100% + 15px) / 2);
+    margin-top: -10px;
+    line-height: 20px;    /*line-heigt안에서 글자가 위아래 가운데로 정렬됨.*/
+    overflow: hidden;
+}
+
+
+.real-num{
+    color: #00ab33;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    line-height: 20px;
+}
+
+.real-search{
+    font-size: 14px;
+}
+
+.item6{
+    width: 11px;
+    height: 6px;
+    position: absolute;
+    right : 0;
+    top: calc((100% + 15px) / 2);
+    margin-top: -3px;
+    background-image: url('https://s.pstatic.net/static/www/img/2018/sp_main_v181019.png');
+    background-position: -187px -73px;
+}
+
+/* 로고 관련*/
+.logo-img{
+    display: block; /*로고 이미지 크기 조절을 위해*/
+    width: 198px;
+    height: 48px;
+    background-image: url('https://s.pstatic.net/static/www/img/2018/sp_search.svg');
+    background-position: -4px -4px;
+}
+
+.logo-box{
+    position: absolute;
+    top: 50%;
+    left: -2px;
+    margin-top: -25px;
+}
+
+.input-box{
+    display: inline-block;
+    width: 523px;
+    height: 49px;
+    border: 2px solid #03cf5d;
+}
+
+.search-box{
+    position:absolute;
+    left:219px;
+    top:50%;
+    margin-top : -20px;
+}
+
+.search-btn{
+    width: 49px;
+    height: 49px;
+    background-color: #03cf5d;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border :0;
+}
+
+.btn-img{
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    width: 21px;
+    height: 21px;
+    background-image: url('https://s.pstatic.net/static/www/img/2018/sp_search.svg');
+    background-position: -4px -60px;
+}
+
+.auto-search{
+    width: 27px;
+    height: 42px;
+    position : absolute;
+    right : 49px;
+    top : 50%;
+    margin-top:-23px;
+    padding : 19px 12px 19px 6px;
+    cursor: pointer;
+}
+
+.auto-down{
+    width:9px;
+    height:4px;
+    background-image: url('https://s.pstatic.net/static/www/img/2018/sp_search.svg');
+    background-position: -87px -60px;
+}
+
+
+.keyboard{
+    width: 31px;
+    height: 42px;
+    position : absolute;
+    right : 76px;
+    top : 50%;
+    margin-top:-23px;
+    padding : 15px 6px;
+    cursor: pointer;
+}
+
+.keyboard-img{
+    width:19px;
+    height:11px;
+    background-image: url('https://s.pstatic.net/static/www/img/2018/sp_search.svg');
+    background-position: -33px -60px;
+}
+
+
+.box5-top,
+.box5-bottom{
+    background-color: white;
+}
+
+.box5-top{
+    height : 34px;
+    border-bottom: 1px solid rgb(235,238,243);
+    padding-left: 15px;
+    position: relative;
+}
+
+.box5-bottom{
+    height: 106px;
+    display: none;
+}
+
+.box5-item1{
+    display: inline-block;
+    width: 208px;
+    height: 33px;
+    padding: 9px 0 7px 0;
+}
+
+.box5-item2{
+    position: absolute;   /*조상들 중에 relative 설정된 조상 기준으로 top right 등이 적용됨 */
+    top:10px;
+    right: 0;
+    margin-right: 78px;
+    color: #888;
+    font-size: 12px;
+    line-height: 14px;
+    font-family: Tahoma,sans-serif;
+}
+
+.color-black{
+    color: black;
+    font-size: 12px;
+    line-height: 14px;
+    font-family: Tahoma,sans-serif;
+}
+
+.box3-dir,
+.box5-item3{
+    width: 68px;
+    height: 33px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 0;
+}
+
+.box3-prev,
+.box3-next,
+.box5-prev,
+.box5-next{
+display: inline-block;
+text-align: center;
+width: 34px;
+height: 33px;
+border-left: 1px solid #ebeef3;
+text-decoration: none;
+padding: 11px 0;  /*위 아래 11px 좌 우 0*/
+}
+
+.btn-prev{
+    width: 6px;
+    height: 11px;
+    display: inline-block;
+    background-image: url('https://s.pstatic.net/static/www/img/2017/sp_timesquare_v170913a.png') ;
+    background-position: -433px -303px;
+}
+
+.btn-next{
+    width: 6px;
+    height: 11px;
+    display: inline-block;
+    background-image: url('https://s.pstatic.net/static/www/img/2017/sp_timesquare_v170913a.png') ;
+    background-position: -433px -324px;
+}
+
+
+
+.day{
+    font-weight: bold;
+    line-height: 17px;
+    font-size:14px;
+    text-decoration: none;
+    color:black;
+}
+
+.fab{
+    color : rgb(227,231,238);
+}
+
+.location{
+    color: #888;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    display: none;
+}
+
+.location:hover{
+    text-decoration: underline;
+}
+
+.input-box>input{
+    outline: 0;
+    width: 405px;
+    height: 23;
+    margin : 12px 0 0 9px;
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: bold;
+    border : 0;
+}
+
+.box2-inner{
+    padding : 15px 0 0 16px;
+}
+
+.box2-inner::after{       /* ::는 가상클래스를 의미. :는 가상선택자 (ex. :hover)*/
+    clear: both;
+    content:"";
+    display:block;
+}
+
+.news{
+    float: left;
+    display: inline-block;
+}
+
+.news>a{
+    text-decoration: none;
+    color: black;
+    font-family : NanumSquare,Dotum,"돋움",Helvetica,AppleSDGothicNeo,sans-serif;
+    line-height: 16px;
+    margin-right: 12px;
+}
+
+
+.icon-next{
+    background-image: url('https://s.pstatic.net/static/www/img/2018/sp_newscast_v180511.png');
+    background-position: -256px -100px;
+    display: inline-block;
+    width: 5px;
+    height: 9px;
+    margin-left: 8px;
+}
+
+.news-content{
+    width: 340px;
+    height: 20px;
+    float: left;
+    overflow: hidden;
+}
+
+.news-content a{
+    text-decoration: none;
+    color:#222;
+    font-size: 12px;
+    line-height: 20px;
+    height: 20px;
+}
+
+
+.news-content a:visited{
+    color: #888;
+}
+
+.news-content a:hover{
+    text-decoration: underline;
+}
+
+.box2-inner2{
+    position: absolute;
+    top : 50%;
+    right: 2px;
+    margin-top: -7px;
+    list-style: none;
+}
+
+.box2-inner2::after{
+    clear: both;
+    content:"";
+    display:block;
+}
+
+.ul-item{
+    display: inline-block;
+    float: left;
+    margin-right: 14px;
+    font-size:12px;
+}
+
+.ul-item>a{
+    display: block;
+    height: 15px;
+    line-height: 16px;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #666;
+}
+
+.ul-item>a:hover{
+    color: #000;
+}
+
+.ul-item>a.green{
+    color: #00ab33;
+}
+
+
+.ul-item>a.green:hover{
+    color:#0b9500;
+}
+
+.box3-inner1{
+    height: 45px;
+    border-bottom: 1px solid #ebeef3;
+    position: relative;
+}
+
+.box3-inner2{
+    height: 200px;
+    position: relative;
+}
+
+.box3-item1{
+    padding: 13px 0 0 16px;
+    position: absolute;
+    top:0;
+    left: 0;
+    font-size: 0;
+}
+
+.box3-item1>a{
+    font-size: 14px;
+    line-height: 20px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+.box3-item2{
+    position: absolute;
+    padding: 13px 0;
+    top:0;
+    left:102px;
+    height: 44px;
+    line-height: 20px;
+    letter-spacing: -1px;
+}
+
+.api-list::after,
+.box3-menu::after,
+.box3-item3::after,
+.box3-item2::after{
+    clear: both;
+    content:"";
+    display:block;
+}
+
+
+.my,
+.all{
+    display: inline-block;
+    font-weight: bold;
+    float: left;        
+    /*box3-item2 안에있는 박스 2개중에 한개에만 내용이 담기면 높이가 서로 달라서 비뚤어지는 증상이 나타남. 그러므로 float 지정해줘야 하며 float을 지정해주면 부모 높이가 자동으로 지정되지 않음.(float는 둥둥 떠있으므로) 그렇기 때문에 위의 .box3-item2::after...{} 와같이 부모에 지정해줌  */
+    cursor: pointer;
+}
+
+.my{
+    color: #666;
+}
+
+.box3-item2>.item3{
+    margin : 2px 15px 0;
+    float:left;
+}
+
+.box3-item3{
+    height: 44px;
+    width: 216px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.box3-menu{
+    width: 126px;
+    height: 44px;
+    display: inline-block;
+    float: left;
+}
+
+.box3-dir{
+    width: 90px;
+    height: 44px;
+}
+
+.box3-prev,
+.box3-next{
+    width: 44px;
+    height: 44px;
+    padding: 16px 0;
+}
+
+.box3-menus{
+    width: 32px;
+    height: 44px;
+    margin-right: 10px;
+    float: left;
+}
+
+.box3-icons{
+    display:block;
+    width: 18px;
+    height: 18px;
+    margin-top: 13px;
+    background-image: url('https://s.pstatic.net/static/www/img/2018/sp_newscast_v180511.png');
+}
+
+.box3-icons.menu{
+    background-position: -228px -124px;
+}
+
+.box3-icons.list{
+    background-position: 0 -193px;
+}
+
+.box3-icons.setting{
+    background-position: -28px -193px;
+}
+
+.api-list{
+    width: 104%;
+    height: 199px;
+    overflow: hidden;
+    font-size: 0;
+}
+
+
+ul.api-list>li{
+    width: 123px;
+    height: 67px;
+    z-index: 0;        /*z-index 값이 작을수록 뒤로감(파워포인트 도형 뒤로보내기와 비슷) */
+    padding: 21px 0 22px;  /*위로 21 아래로 22 좌우 0*/
+    border-right: 1px solid #f1f3f6;
+    float: left;
+}
+
+ul.api-list>li>a>img{
+    height: 24px;
+    width: auto;   /*이미지태그의 원본 비율에 맞게 높이는 고정된 상태에서 가로크기를 조정*/
+}
+
+ul.api-list>li>a{
+    display: block;
+    text-align: center;
+}
+
+.border-right{
+    width: 1px;
+    height:199px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.border-center1,
+.border-center2{
+    width: 738px;
+    height:1px;
+    position: absolute;
+    background-color: #f1f3f6;
+    z-index: 2;
+    left: 0;
+}
+
+.border-center1{
+    top:66px;
+}
+
+.border-center2{
+    bottom: 66px;
+}
+
+/* 자동완성박스*/
+#auto-box{
+    width: 523px;
+    height: 89px;
+    background-color: white;
+    position: absolute;
+    z-index: 5;
+    top : 47px;
+    border: 1px solid rgb(190,200,216);
+    display: none;
+}
+
+.auto-up{
+    background-position: -138px -60px;
+}
+
+.sub-menu{
+    height: 327px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 4;
+    display: none;
+}
+
+.sub-menu-background{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.3;
+    z-index: 3; /* sub-menu의 z-index보다 낮게 지정해 줘야함 */
+    display: none;
+}
+
+.sub-menu-inner{
+  position: relative;
+  width: 1100px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 20px 0 15px 0;
+}
+
+.sub-menu-icons{
+  position: absolute;
+  top: -47px;
+  right: -5px;
+  padding-top: 8px;
+  height: 45.8px;
+  background: #fff;
+  width: 240px;
+}
+.all-service{
+  width: 98px;
+}
+.menu-setting{
+  width: 68px;
+}
+.init{
+  width: 75px;
+}
+.ok, .cancle{
+  width: 55px;
+}
+.sub-menu-a,
+.sub-menu-a:visited{
+  float: right;
+  margin-left: 5px;
+  height: 28px;
+  border: 1px solid #e3e7ee;
+  background: #fff;
+  color: #444;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 29px;
+}
+.menu-close{
+    float: right;
+    margin: 2px 0 0 9px;
+    padding: 5px;
+    background: #fff;
+}
+
+.menu-close>span{
+    display: block;
+    width: 17px;
+    height: 17px;
+    background-position: -191px -257px;
+    background-image: url('https://s.pstatic.net/static/www/img/2018/sp_themecast_v180607.png');
+    background-repeat: no-repeat;
+}
+
+
+.search-list{
+    position: absolute;
+    top: -1px;
+    right: 0;
+    min-height: 334px;
+    width: 290px;
+    border: 1px solid #bec8d8;
+    background: #fff;
+    z-index: 5;
+    display: none;
+}
+
+.real-search-box{
+    width: 290px;
+    height: 334px;
+    position: absolute;
+    right: 0;
+    top:0;
+    background-color: white;
+    border: 1px solid #bec8d8;
+    z-index: 2;
+    display: none;
+}
+
+.api-list>li>div{
+    display: none;
+    width: 95px;
+    height: 30px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+/* 이벤트가 발생한 객체와 속성이 적용되는 객체가 같을때는 굳이 js로 안해도됨 */
+ul.api-list>li:hover{
+    background-color: #f9fafc;
+}
+
+.real-top{
+    height: 46px;
+    padding: 26px 26px 0;
+}
+
+.real-rank{
+    height: 30px;
+    padding : 0 9px 6px 17px;
+}
+
+.rank{
+    height: 24px;
+    padding-top: 5px;
+    border: 1px solid #e3e7ee;
+    display: block;
+    float: left;
+    text-align: center;
+    text-decoration: none;
+    color: #888;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.rank-left{
+    width: 128px;
+    border-right: none;
+    background-color: #f9fafc;
+}
+
+.rank-right{
+    width: 129px;
+}
+
+.rank-list{
+    height: 22px;
+    padding: 4px 0 0 21px;
+}
+.sub_menu_div{
+  float: left;
+  height: 292px;
+  width: 156px;
+  padding-left: 16px;
+  border-left: 1px solid #f1f3f6;
+  border-right: 1px solid #f1f3f6;
+}
+/* 공통 클래스들 */
+
+.real-search-box:hover,
+#auto-box.display-block,
+ul.api-list>li>div.display-block,
+.display-block{
+    display : block;
+}
+
+ul.api-list>li>a.display-none,
+.display-none{
+    display: none;
+}
+
+
+.display-inline-block{
+    display: inline-block;
+}
