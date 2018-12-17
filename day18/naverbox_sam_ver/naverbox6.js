@@ -161,11 +161,12 @@ $(document).ready(function(){
   var menuArr2=[];/* 실제 네이버에서 뿌려줄 메뉴 (저장되어 이용됨)*/
   
   $('.sub_menu_div input[type="checkbox"]').click(function(){//sub_menu_div의 자식 체크박스들을 클릭하면
-    
-    var check = $(this);
+    var check = $(this);//.sub_menu_div input[type="checkbox"]
     var isContain = selectedMenu.indexOf(check.val());
     //배열을 클릭된 체크박스의 값으로 조사해서 있으면 위치값 반환 없으면 -1
+    
     var maxSize = 5;//배열의 최대 크기한계(체크아이템 갯수)
+    
     if(isContain < 0 && selectedMenu.length == maxSize){//-1이고(배열에 저장된 값이 없고) 배열이 꽉 찼다면
       check.prop('checked','');//체크 해제
     }

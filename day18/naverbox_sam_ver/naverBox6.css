@@ -369,7 +369,7 @@ div{
     margin-left: 14px;
     display: block;
     margin-top: -9px;
-    border: #000 1px solid;
+    border: #00b336 1px solid;
     float: left;
 }
 
@@ -425,7 +425,14 @@ div{
     width: 27px;
     background-position: -279px -78px;
 }
-
+.line{
+  width: 25px;
+  background-position: -72px -285px;
+}
+.memo{
+    width: 26px;
+    background-position: -36px -285px
+}
 
 
 .item3{
@@ -1142,6 +1149,12 @@ ul.api-list>li:hover{
   padding-left: 16px;
   border-left: 1px solid #f1f3f6;
   border-right: 1px solid #f1f3f6;
+}
+.sub_menu_div>div{
+  padding-top: 10px;
+}
+.sub_menu_div input{
+  font-size: 12px;
 }
 /* 공통 클래스들 */
 
