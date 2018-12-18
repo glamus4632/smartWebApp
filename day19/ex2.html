@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="ex2.js"></script>
+  <style>
+    div{
+      border: 1px solid black;
+      width: 100px;
+      height: 100px;
+    }
+    div:hover{
+      background-color: red;
+    }
+    .pp{
+      display: none;
+    }
+    .display-block{
+      display: block;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+
+  <div><span class="pp">hover 예제</span></div>
+  <!--<div>hover 예제</div>-->
+  <!--css로만으로는 폰트사이즈를 기본 0으로 하고 div에 호버하면 폰트사이즈를 키운다.-->  
+
+  
+  <script>
+    $('div').hover(function(){
+      $('.pp').toggleClass('display-block');
+    });
+
+    //호버로 하는 방법(display클래스를 따로 만들지 않아도 됨)
+    // $('div').hover(function(){
+    //   $(this).text('hover예제');
+    // },function(){
+    //   $(this).text('');
+    // });
+  </script>
+</body>
+</html>

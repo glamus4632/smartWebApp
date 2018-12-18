@@ -20,12 +20,13 @@ $(document).ready(function(){
     closeSubMenu();
     initCheck();
   });
-  // function menu(){
-  //   console.log(12);
-  //   $('.item4').toggleClass('item4-1');
-  //   $('.sub-menu').toggleClass('display-block');
-  //   $('.sub-menu-background').toggleClass('display-block');
-  // }
+  
+  //** 더보기 박스 닫는 함수  *******************************/
+  function menu(){
+    $('.item4').toggleClass('item4-1');
+    $('.sub-menu').toggleClass('display-block');
+    $('.sub-menu-background').toggleClass('display-block');
+  }
 
   /*************인기검색어, 뉴스스탠드 자동 스크롤*********************************************** */  
   /*///이거는 마지막이 되면 1번으로 주르륵 올라가서 보기 안좋다
@@ -151,9 +152,6 @@ $(document).ready(function(){
     $('.ok').removeClass('display-none');
     $('.cancle').removeClass('display-none');
     $('.init').removeClass('display-none');
-    
-
-    
   });
 
 //** *더보기 메뉴 아이템 변경***********************************//
@@ -177,7 +175,9 @@ $(document).ready(function(){
     else{ //배열에 값이 있으면(-1 보다 크면) arrindex > 0
       selectedMenu.splice(isContain,1); //배열에서 삭제
     }
-   
+    //여기까지가 체크 할지 말지를 결정하는 코드
+
+    //여기부터 빈박스에 배열에 저장된(체크된)애를 넣어주는 코드
     //배열에 있는 것들을 인풋창에 제공
     var cnt = 0;
     $('.item2-1').each(function(){//item2-1의 갯수만큼 반복
@@ -192,13 +192,6 @@ $(document).ready(function(){
       }
     });
   });
-  
-  //** 더보기 박스 닫는 함수  *******************************/
-  function menu(){
-    $('.item4').toggleClass('item4-1');
-    $('.sub-menu').toggleClass('display-block');
-    $('.sub-menu-background').toggleClass('display-block');
-  }
   
   //** ok button  *******************************/
   $('.ok').click(function(){
@@ -253,7 +246,7 @@ $(document).ready(function(){
     $('.sub_menu_div input[type="checkbox"]').each(function(){
       $(this).prop('checked','');//일단 한 번 체크 모두 해체
       for(var i=0; i<menuArr2.length; i++){
-        if($(this).val()==menuArr2[i]){//체크되어있는 값을 arr2에 저장
+        if($(this).val()==menuArr2[i]){//체크된거랑 menuArr2랑 같으면(menuArr2에 저장된 값만 체크되게)
           $(this).prop('checked','checked');//체크
         }
       }
@@ -263,14 +256,15 @@ $(document).ready(function(){
   /* x, 취소, 초기화, 확인버튼 클릭 시 호출되는 함수(원상복귀) */
   function closeSubMenu(){
     displayMenu();
-    $('.sub_menu_div input[type=checkbox]').each(function(){//체크 버튼 없앰
+    //더보기 버튼 클릭 시 체크 버튼 없앰
+    $('.sub_menu_div input[type=checkbox]').each(function(){
       $(this).addClass('display-none');
     });
     //(초기화)149번째 줄 반대로
     displayReset();
   }
 
-  //label의 for 프로퍼티를 삭제 (메뉴설정버튼 안눌렀을 때)
+  //label의 for 프로퍼티를 삭제 (메뉴설정버튼 안눌렀을 때 글씨 눌러도 아무 동작이 없도록 label의 for속성의 값을 삭제)
   function initCheck(){
     $('.sub_menu_div label').each(function(){
       $(this).prop('for','');
@@ -281,21 +275,21 @@ $(document).ready(function(){
   function createCheck(){
     var i=0;
     var checkBox = $('.sub_menu_div input[type=checkbox]');
-    $('.sub_menu_div label').each(function(){
-      $(this).prop('for',checkBox.eq(i++).prop('id'));
+    $('.sub_menu_div label').each(function(){//체크박스의 개숫만큼 반복
+      $(this).prop('for',checkBox.eq(i++).prop('id'));//i번째의 체크박스의 id를 for 프로퍼티에 추가
     });
   }
 
   //메뉴설정 실제로 보여주는 함수
   function displayMenu(){
     var i=0;
-    if(menuArr2.length == 0){//선택된 거 없으면
+    if(menuArr2.length == 0){//선택된 거 없으면 기본 설정된 메뉴 출력
       $('.item2-1').each(function(){//item2-1의 갯수만큼(9개) 반복
         $(this).prop('class','item2-1 back-img');//item2-1의 class 프로퍼티를 item2-1 back-img로
         $(this).addClass(menuArr[i++]);//뒤에 menuArr에 저장되있는 이름으로 클래스추가(disc같은거)
       });
     }
-    else{//선택된게 있으면
+    else{//선택된게 있으면 선택된 메뉴 출력
       $('.item2-1').each(function(){//'.item2-1' = 5칸 의 갯수만큼 반복
         if(menuArr2.length > i){//밑에서 i를 ++하고 menuArr2의 갯수가 i보다 크면 if실행 같거나 작아지면 else실행
           $(this).prop('class','item2-1 back-img');

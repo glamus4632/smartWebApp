@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+  <title>Document</title>
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+    .modal-background{
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      min-height: 100vh;/*vh는 뷰 헤이트 100 = 100% */
+      background-color: black;
+      opacity: 0.5;
+      z-index: 1;
+      display: none;
+    }
+    .modal{
+      position: absolute;
+      width: 400px;
+      height: 220px;
+      left: calc(50% - 200px);
+      top: calc(50% - 110px);
+      background-color: white;
+      z-index: 2;
+      display: none;
+    }
+    .modal-header{
+      height: 60px;
+      border-bottom: 1px solid #f1f2f3;
+    }
+    h2{
+      margin-left: 10px;
+      display: inline-block;
+      line-height: 20px;
+    }
+    .modal-container{
+      position: relative;
+      height: 100px;
+    }
+    .modal-footer{
+      height: 60px;
+      border-top: 1px solid #f1f2f3;
+    }
+    .modal-close{
+      float: right;
+      margin-right: 10px;
+      font-size: 35px;
+      line-height: 58px;
+      cursor: pointer;
+    }
+    form>div{
+      height: 50px;
+    }
+    form span{
+      display: inline-block;
+      margin: 10px 0 0 10px;
+      width: 50px;
+      height: 30px;
+      font-size: 18px;
+      line-height: 20px;
+    }
+    input{
+      position: relative;
+      border-radius: 4px;
+      border: 1px solid #666;
+      margin-top: 10px;
+      width: 250px;
+      height: 30px;
+      font-size: 18px;
+      line-height: 20px;
+    }
+    .loginOk{
+      position: absolute;
+      width: 50px;
+      height: 30px;
+      right: 15px;
+      bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <button class="btn-login">login</button>
+  <div class="modal-background"></div>
+  <div class="modal">
+    <div class="modal-header"><h2>Login</h2> <i class="fas fa-times modal-close"></i></div>
+    <div class="modal-container">
+      <form>
+          <div>
+            <span>ID:</span>
+            <input type="text" name="id" id="id">
+          </div>
+          <div>
+            <span>PW:</span>
+            <input type="password" name="pw" id="pw">
+          </div>
+          <button class="loginOk" type="submit">login</button>
+      </form>
+    </div>
+    <div class="modal-footer">Modal footer..</div>
+    
+  </div>
+
+  <script>
+  $(document).ready(function(){
+    $('.btn-login').click(function(){
+      $('.modal-background').css('display','block');
+      $('.modal').css('display','block');
+    });
+    $('.modal-close').click(function(){
+      $('.modal-background').css('display','none');
+      $('.modal').css('display','none');
+    });
+  });
+  </script>
+</body>
+</html>

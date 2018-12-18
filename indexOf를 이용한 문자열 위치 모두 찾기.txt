@@ -1,0 +1,12 @@
+indexOf를 이용한 문자열 모두 찾기
+
+var arr = '121235431325311111';
+    var index = arr.indexOf('1');//찾아진 위치
+    var cnt = index != -1 ? 1 : 0;
+
+    while(index != -1){
+      index = arr.indexOf('1', index+1);//찾을 문자열과 위치
+      index != -1 ? ++cnt : cnt;
+      console.log(index);
+    }
+    console.log('1의 갯수: ' + cnt);

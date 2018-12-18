@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+  <title>Document</title>
+  <style>
+    .box{
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+      cursor: pointer;
+      font-size: 20px;
+      text-align: center;
+      line-height: 98px;
+    }
+    .back-color{
+      background-color: orange;
+    }
+  </style>
+</head>
+<body>
+  <div class="box box1">1</div>
+  <div class="box box2">2</div>
+  <div class="box box3">3</div>
+  <div class="box box4">4</div>
+  <div class="box box5">5</div>
+  <div class="box box6">6</div>
+
+  <script>
+    $(document).ready(function(){
+      var arr =[];
+      $('.box').click(function(){
+        // var check = $(this);
+        // // 내가 한거
+        // // if($('.back-color').length<3){//.back-color의 갯수가 3 미만이면(0,1,2)
+        // //   check.toggleClass('back-color');//addclass이면 2개이하일 때 체크된 것 다시 눌러도 안지워진다.
+        // // }
+        // // else{
+        // //   check.removeClass('back-color');
+        // // }
+        // var checkedCnt = $('.back-color').length;
+        // var maxCnt = 3;
+        // if(checkedCnt < maxCnt){
+        //   check.toggleClass('back-color');
+        // }
+        // else{
+        //   if(check.prop('class').indexOf('back-color') == -1){
+        //   //4개째 부터 'back-color'클래스가 없을때(선택 안된거를 누를 때) 메세지 출력
+        //     alert('최대 3개까지 선택할 수 있습니다.');
+        //   }
+        //   check.removeClass('back-color');
+        // }
+        
+        var maxCnt = 3;
+        var value = $(this).text();
+        if(arr.indexOf(value) == -1){//선택되지 않았을 경우
+          if(arr.length < maxCnt){//3개 이하이면
+            arr.push(value);
+            $(this).addClass('back-color');
+            console.log(arr.length);
+          }
+          else{//3개 이상이면
+            alert('최대 3개까지 선택할 수 있습니다.');
+          }
+        }
+        else{//선택한애를 다시 눌렀을 경우
+          arr.splice(arr.indexOf(value),1);//찾는 단어의 위치(this의 텍스트)부터, 1개(결국 본인)
+          $(this).removeClass('back-color');
+          console.log(arr.length);
+        }
+      });
+    });
+
+
+
+
+
+
+    //문자열 모두 찾기
+    var arr = '121235431325311111';
+    var index = arr.indexOf('1');//처음 찾아진 위치
+    var cnt = index != -1 ? 1 : 0;//찾았으면 1, 아니면 0
+
+    while(index != -1){
+      console.log(index);
+      index = arr.indexOf('1', index+1);//찾을 문자열과 위치이동
+      index != -1 ? ++cnt : cnt;
+    }
+    console.log('1의 갯수: ' + cnt);
+  </script>
+</body>
+</html>
