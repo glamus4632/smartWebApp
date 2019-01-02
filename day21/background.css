@@ -1,0 +1,32 @@
+@charset 'utf-8';
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+.back-image{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	
+	background-image: url("https://cdn.ppomppu.co.kr/zboard/data3/2012/0627/1340730419_%B7%B9%B0%ED.jpg");
+	background-size: cover;
+	/* containe은 이미지의 크기를 맞춤
+		cover는 비율을 유지해서 전체크기로
+	*/
+	animation: ani2 5s infinite;
+	
+	animation-timing-function: ease-in-out;/*애니메이션이 변할 때 어떻게 보이게 할지(부드럽게, 팍팍 변할 지)*/
+	opacity: 0.4;
+}
+body{
+	background-color: black;
+}
+
+@keyframes ani2{
+	33%{background-image: url("http://nix207.iptime.org:8000/nix207w/wp-content/uploads/1/1140947469.jpg");}
+	66%{background-image: url("https://kmug.co.kr/data/file/photo/data_photo_%ED%86%A0%EB%81%BC_%EC%9B%94%ED%8E%98%EC%9D%B4%ED%8D%BC.jpg");}
+	100%{background-image: url("https://cdn.ppomppu.co.kr/zboard/data3/2012/0627/1340730419_%B7%B9%B0%ED.jpg");}
+}
