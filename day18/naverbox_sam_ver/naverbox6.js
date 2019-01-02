@@ -13,13 +13,13 @@ $(document).ready(function(){
     initCheck();
   });
   //** close button  *******************************/
-  $('.menu-close').click(function(){
-    selectedMenu=[];
-    menu();
-    checkMenu();
-    closeSubMenu();
-    initCheck();
-  });
+	$('.menu-close').click(function(){
+		selectedMenu=[];
+		menu();
+		checkMenu();
+		closeSubMenu();
+		initCheck();
+	});
   
   //** 더보기 박스 닫는 함수  *******************************/
   function menu(){
