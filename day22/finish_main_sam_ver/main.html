@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="nav.css">
+    <!--부트스트랩, 폰트어썸, cdn ajax 춘서로 할것-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
+    <script charset="UTF-8" class="daum_roughmap_loader_script" src="http://dmaps.daum.net/map_js_init/roughmapLoader.js"></script>
+    <script src="main.js"></script>
+    <script src="nav.js"></script>
+    <title>청남대</title>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="back"><i class="fas fa-angle-left"></i></a>
+        <a class="nav-title">청남대 둘러보기</a>
+        <div class="btn-ham font-black">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+    
+    <div class="sidebar">
+        <i class="fas fa-times sidebar-close"></i>
+    </div>
+    
+    
+    <div class="title swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" data-hash="slide1">대통령기념관</div>
+            <div class="swiper-slide" data-hash="slide2">하늘정원</div>
+            <div class="swiper-slide" data-hash="slide3">국화축제</div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h2 class="contents-title">대통령 기념관</h2>
+        <div class="swap-box">
+            <div class="contents swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide content" data-hash="slide1">
+                        <div id="demo" class="carousel slide" data-ride="carousel" data-interval="2000">
+                            <ul class="carousel-indicators">
+                                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                                <li data-target="#demo" data-slide-to="1"></li>
+                                <li data-target="#demo" data-slide-to="2"></li>
+                            </ul>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="https://cdn.ppomppu.co.kr/zboard/data3/2012/0627/1340730419_%B7%B9%B0%ED.jpg" alt="Los Angeles" width="1100" height="500">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="https://kmug.co.kr/data/file/photo/data_photo_%ED%86%A0%EB%81%BC_%EC%9B%94%ED%8E%98%EC%9D%B4%ED%8D%BC.jpg" alt="Chicago" width="1100" height="500">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="http://nix207.iptime.org:8000/nix207w/wp-content/uploads/1/1140947469.jpg" alt="New York" width="1100" height="500">
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#demo" data-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide content" data-hash="slide2">
+                        <!-- 1. 약도 노드 -->
+                        <div id="daumRoughmapContainer1546584196652" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+                        
+                    </div>
+                    <div class="swiper-slide content" data-hash="slide3">
+                        <img src="http://nix207.iptime.org:8000/nix207w/wp-content/uploads/1/1140947469.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

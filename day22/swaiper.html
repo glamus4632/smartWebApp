@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--min버젼만 써도 된다.
+		구글에 swaiper치고 처음 나오는 사이트 들어가면 된다. (http://idangero.us/swiper/get-started/)
+		메인에 버전이 나와 있어서 cdn코드를 긁어온 후 고치면 된다.
+	-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
+	<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+	<title>스와이퍼!!</title>
+	
+	<style>
+		html, body {
+		  position: relative;
+		  height: 100%;
+		}
+		body {
+		  background: #eee;
+		  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+		  font-size: 14px;
+		  color:#000;
+		  margin: 0;
+		  padding: 0;
+		}
+		.swiper-container {
+		  width: 100%;
+		  height: 100%;
+		}
+		.swiper-slide {
+			/* text-align: center;
+			font-size: 18px;
+			background: #fff;
+			
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			-webkit-justify-content: center;
+			justify-content: center;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			-webkit-align-items: center;
+			align-items: center; */
+		}
+	</style>
+	</head>
+	<body>
+	<!-- Swiper -->
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+					<!-- Brand -->
+					<a class="navbar-brand" href="#">Navbar</a>
+					
+					<!-- Toggler/collapsibe Button -->
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					
+					<!-- Navbar links -->
+					<div class="collapse navbar-collapse" id="collapsibleNavbar">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link" href="#">슬라이드1</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">슬라이드2</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">슬라이드3</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">슬라이드4</a>
+							</li> 
+						</ul>
+					</div>
+				</nav>
+			</div>
+			<div class="swiper-slide">
+				<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+					<!-- Brand -->
+					<a class="navbar-brand" href="#">Navbar</a>
+					
+					<!-- Toggler/collapsibe Button -->
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					
+					<!-- Navbar links -->
+					<div class="collapse navbar-collapse" id="collapsibleNavbar">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link" href="#">슬라이드1</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">슬라이드2</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">슬라이드3</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">슬라이드4</a>
+							</li> 
+						</ul>
+					</div>
+				</nav>
+			</div>
+			<div class="swiper-slide">
+				<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+					<!-- Brand -->
+					<a class="navbar-brand" href="#">Navbar</a>
+					
+					<!-- Toggler/collapsibe Button -->
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					
+					<!-- Navbar links -->
+					<div class="collapse navbar-collapse" id="collapsibleNavbar">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link" href="#">슬라이드1</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">슬라이드2</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">슬라이드3</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">슬라이드4</a>
+							</li> 
+						</ul>
+					</div>
+				</nav>
+			</div>
+			<div class="swiper-slide">
+				<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+					<!-- Brand -->
+					<a class="navbar-brand" href="#">Navbar</a>
+					
+					<!-- Toggler/collapsibe Button -->
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					
+					<!-- Navbar links -->
+					<div class="collapse navbar-collapse" id="collapsibleNavbar">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link" href="#">슬라이드1</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">슬라이드2</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">슬라이드3</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">슬라이드4</a>
+							</li> 
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+	
+	  <!-- Initialize Swiper -->
+	<script>
+		var swiper = new Swiper('.swiper-container',{loop:true});
+	</script>
+</body>
+</html>
