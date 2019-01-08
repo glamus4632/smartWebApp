@@ -1,0 +1,28 @@
+@charset 'utf-8';
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+input{
+    width: 320px;
+    height: 80px;
+    border: 2px solid black;
+    background-color: #f2f3ff;
+    text-align: right;
+}
+.div-row{
+    display: flex;
+    /*인라인 블럭은 div-row가 한줄이 되고
+    flex는 안의 내용이 한줄이 된다
+    이 안의 자식 요소들의 엔터, 스페이스로 인한 공백을 없애준다.
+    */
+}
+.div-btn{
+    width: 80px;
+    height: 80px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 30px;
+    line-height: 70px;
+}
