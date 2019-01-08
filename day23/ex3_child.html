@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <title>자식윈도우</title>
+</head>
+<body>
+    <h3>ex3_child.html 입니다</h3>
+    <input type="text" id="divData"><br>
+    <button id="btnOk">확인</button>
+    <script>
+        $(document).ready(function(){
+            $('#btnOk').click(function(){
+                // var id = opener.document.getElementById('sendData').value;
+                // //parents의 name, id 속성의 이름이 같은걸 이용
+                // opener.document.getElementById(id).value = $('#divData').val();
+                
+                //제이쿼리로
+                var id = $(opener.document).find('#sendData').val();
+                //parents의 name, id 속성의 이름이 같은걸 이용
+                $(opener.document).find('#'+id).val($('#divData').val());
+                window.close();
+            })
+        });
+        
+    </script>
+</body>
+</html>

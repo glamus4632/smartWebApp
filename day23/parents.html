@@ -1,0 +1,27 @@
+<!--자식윈도우를 오픈하여 컨트롤하는 코드-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <title>부모윈도우</title>
+</head>
+<body>
+    <button id="btnchild">자식창 열기</button><br>
+    <input type="text" id="input">
+    <button id="btnData">데이터전달</button>
+    <script>
+        var childWin;
+        $('#btnchild').click(function(){
+            childWin = window.open('child.html','child','width=400, height=500');
+            //url(경로),파일이름,크기위치(크기가 다르다면 새 창에서 뜬다)
+            //childWin에 자식윈도우객체를 대입
+        });
+        $('#btnData').click(function(){
+            childWin.document.getElementById('divData').value = document.getElementById('input').value;
+        });
+    </script>
+</body>
+</html>

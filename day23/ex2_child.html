@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>자식윈도우</title>
+</head>
+<body>
+    <h3>child.html 입니다</h3>
+    <input type="text" id="divData" readonly><br>
+    <input type="text" id="inputData">
+    <button id="btnOk" onclick="sendData()">확인</button>
+    <script>
+        //자식창에서 부모창을 확인하는 방법 opener (현재 창을 연(open) 부모객체를 가르킨다)
+        function sendData(){
+            opener.document.getElementById('input').value = document.getElementById('inputData').value;
+            window.close();
+        }
+    </script>
+</body>
+</html>

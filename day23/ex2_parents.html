@@ -1,0 +1,35 @@
+<!--자식윈도우를 오픈하여 컨트롤하는 코드-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <title>부모윈도우</title>
+</head>
+<body>
+    
+    <input type="text" id="horizontal">
+    <input type="text" id="vertical">
+    <button id="btnchild">자식창 열기</button><br>
+    <!-- <button id="btnData">데이터전달</button> -->
+    <script>
+        var childWin;
+        var minHor = 200;
+        var minVer = 200;
+        $('#btnchild').click(function(){
+            var hor = parseInt($('#horizontal').val());
+            var ver = parseInt($('#vertical').val());
+            if(hor < minHor){
+                hor = minHor;
+            }
+            if(ver < minVer){
+                ver = minVer;
+            }
+            childWin = window.open('ex2_child.html','ex2_child','width='+hor+', height='+ver);
+        });
+
+    </script>
+</body>
+</html>
